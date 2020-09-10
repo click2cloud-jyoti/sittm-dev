@@ -63,7 +63,7 @@
             "value": "West US 2"
         },
         "serverFarmResourceGroup": {
-            "value": "test_rg"
+            "value": ""
         },
         "subscriptionId": {
             "value": "5ba10a19-42d5-42fc-a9aa-0e7b174a29ba"
