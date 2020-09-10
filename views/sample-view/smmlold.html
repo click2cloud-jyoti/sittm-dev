@@ -1,0 +1,1967 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cards - Individual</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Wide selection of cards with multiple styles, borders, actions and hover effects.">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="./main.css" rel="stylesheet">
+    <style type="text/css">
+        #myModal1 .modal-footer {
+            background: #fff !important;
+            padding: 15px 133px
+        }
+        
+        #myModal1 .modal-dialog {
+            width: 26%
+        }
+        
+        #myModal1 .modal-header {
+            padding: 6px 14px
+        }
+        
+        #myModal2 .modal-header,
+        .modal-footer {
+            background: #fff!important;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: 0!important;
+            border-radius: 0!important
+        }
+        
+        #myModal2 .modal {
+            top: 13%
+        }
+        
+        #myModal2 .star {
+            color: red
+        }
+        
+        #myModal2 .modal-content {
+            border: 0!important;
+            border-radius: 0
+        }
+        
+        #myModal2 label {
+            font-size: 11px
+        }
+        
+        #myModal2 h4 {
+            font-size: 17px;
+            color: #4f7cfb
+        }
+        
+        #myModal2 .modal .widget-heading {
+            font-size: 14px!important
+        }
+        
+        #myModal2 .modal .widget-subheading {
+            color: #4f7cfb;
+            font-size: 11px!important
+        }
+        
+        #myModal2 .form-control {
+            font-size: 11px
+        }
+        
+        #myModal2 .modal-body {
+            padding: 10px 30px
+        }
+        
+        #myModal2 .modal-footer .btn {
+            padding: 5px 11px
+        }
+        
+        #myModal2 .modal-dialog {
+            width: 386px
+        }
+        
+        #myModal2 .form-group {
+            margin: 0
+        }
+        
+        .list-group {
+            padding-top: 22px;
+        }
+        
+        .pe-7s-look {
+            font-size: 1.5em;
+        }
+        
+        .active .pe-7s-look {
+            color: #3f6ad8;
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        .active {
+            background: #e0f3ff
+        }
+        
+        .manager-info {
+            color: #495057
+        }
+        
+        .list-group-item {
+            border-bottom: 1px solid #efefef !important;
+        }
+        
+        .banner {
+            padding-top: 140px;
+            color: #fff
+        }
+        
+        h1 {
+            margin-bottom: 40px
+        }
+        
+        .banner a {
+            background: #fb4f77f7;
+            color: #fff;
+            padding: 12px 50px;
+            font-size: 15px;
+            border-radius: 2px
+        }
+        
+        #hero-banner {
+            background: url('./assets/images/banner.png')0 0 no-repeat;
+            height: 400px;
+            margin-bottom: 60px;
+            background-size: cover;
+        }
+        
+        .manager-col {
+            border: 1px solid #ccc;
+            padding: 15px;
+            height: 564px;
+            overflow: auto;
+        }
+        
+        .team-col {
+            background: #e0f3ff;
+            padding: 15px 30px 0px 30px;
+            margin-bottom: 30px
+        }
+        
+        .card {
+            padding: 10px
+        }
+        
+        .widget-heading {
+            font-size: 13px !important;
+            font-weight: 600 !important;
+            color: #495057;
+        }
+        
+        .nav-tabs .nav-link.active,
+        .nav-tabs .nav-link {
+            display: contents !important;
+            color: #495057
+        }
+        
+        .white-box {
+            background: #fff;
+            padding: 8px 16px
+        }
+        
+        h5 {
+            font-size: 12px;
+            color: #4f7cfb;
+            font-weight: 600
+        }
+        
+        p {
+            margin: 0;
+            font-size: 12px
+        }
+        
+        .widget-subheading {
+            font-size: 12px !important
+        }
+        
+        .card-head {
+            font-size: 17px;
+            color: #4f7cfb;
+            font-weight: 600
+        }
+        
+        .card-subhead {
+            font-size: 15px;
+            font-weight: 600
+        }
+        
+        .input-group-text {
+            background: #fff;
+        }
+        
+        .modal-header,
+        .modal-footer {
+            background: #fff !important;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: 0 !important;
+            border-radius: 0 !important
+        }
+        
+        .star {
+            color: red
+        }
+        
+        .modal-content {
+            border: 0 !important;
+            border-radius: 0
+        }
+        
+        label {
+            font-size: 11px
+        }
+        
+        h4 {
+            font-size: 15px;
+            color: #4f7cfb
+        }
+        
+        .modal .widget-subheading {
+            color: #4f7cfb;
+            font-size: 11px
+        }
+        
+        .form-control {
+            font-size: 11px
+        }
+        
+        .modal-body {
+            padding: 10px 30px
+        }
+        
+        .modal-footer .btn {
+            padding: 5px 11px
+        }
+        
+        .modal-dialog {
+            width: 500px
+        }
+        
+        .form-group {
+            margin: 0
+        }
+        
+        .widget-content .widget-content-right {
+            position: absolute;
+            right: 0
+        }
+        
+        .filter-btn {
+            border: 1px solid #ccc;
+            background: none;
+            padding: 4px;
+            width: 100px
+        }
+        
+        button p {
+            float: left;
+            font-size: 14px
+        }
+        
+        .text-danger {
+            font-size: 18px;
+            margin: 8px 0
+        }
+        
+        @media(max-width:767px) {
+            h1 {
+                font-size: 30px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="d-none" id="hero-banner">
+        <div class="container">
+            <div class="banner">
+                <h1>Secure Infrastructure Technical Talent Management</h1>
+                <a href="#" type="button" data-toggle="modal" data-target="#myModal">Nominate a Talent</a>
+            </div>
+            <!-- Modal -->
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Nominate a Talent</h4>
+
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form action="/action_page.php">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="uname">Alias </label>
+                                            <span class="star">*</span>
+                                            <input type="text" class="form-control" id="uname" placeholder="" name="uname">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel1">Mobility</label>
+                                            <select class="form-control" id="sel1">
+										    <option>Yes</option>
+										    <option>2</option>
+										    <option>3</option>
+										    <option>4</option>
+										</select>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel2">Travel Tolerance</label>
+                                            <select class="form-control" id="sel2">
+										    <option>Medium</option>
+										    <option>2</option>
+										    <option>3</option>
+										    <option>4</option>
+										</select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel4">Project</label>
+                                            <select class="form-control" id="sel4">
+    										    <option></option>
+    										    <option>Low</option>
+    										    <option>High</option>
+										    
+										      </select>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Motivational Factor</label>
+                                            <div class="input-group ">
+                                                <input type="text" class="form-control border-right-0" placeholder="">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text"><img src="assets/images/search_icon.svg"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel4">Trainings</label>
+                                            <select class="form-control" id="sel4">
+										    <option>Medium</option>
+										    <option>Low</option>
+										    <option>High</option>
+										    
+										</select>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+
+
+                                            <label for="sel4">Area of Inteest </label>
+                                            <input type="text" class="form-control" id="interest" placeholder="" name="interest">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+
+
+                                            <label for="sel4">Quick Facts</label>
+                                            <input type="text" class="form-control" id="facts" placeholder="" name="facts">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+
+
+                                            <label for="sel4">Deliverables</label>
+                                            <input type="text" class="form-control" id="deliver" placeholder="" name="deliver">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="page-container">
+        <div class="row ">
+            <div class="col-md-12">
+                <div class="main-head">
+
+                    <h3 class="card-head m-0">Managers & Team Info</h3>
+                </div>
+
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div class="page-container">
+
+        <div class="row">
+
+            <div class="col-md-4">
+                <div class="manager-col">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="card-head">Managers</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="filter-btn float-right">
+                                <p>Filter</p><img src="assets/images/filter_icon.svg" class="float-right">
+                            </button>
+                        </div>
+                    </div>
+
+                    <ul class="nav nav-tabs rm-list-borders rm-list-borders-scroll list-group list-group-flush" role="tablist">
+
+                        <li class="nav-item list-group-item">
+                            <a class="nav-link active" href="#profile" role="tab" data-toggle="tab">
+                                <div class="widget-content p-0">
+                                    <div class="widget-content-wrapper">
+                                        <div class="widget-content-left mr-3">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/2.jpg" alt="">
+                                        </div>
+                                        <div class="widget-content-left">
+                                            <div class="widget-heading">Francis Tranc (ft)</div>
+                                            <div class="widget-subheading">Storage Team Manager</div>
+                                        </div>
+                                        <div class="widget-content-right">
+                                            <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                                <i class="pe-7s-look"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item list-group-item">
+                            <a class="nav-link " href="#profile1" role="tab" data-toggle="tab">
+                                <div class="widget-content p-0">
+                                    <div class="widget-content-wrapper">
+                                        <div class="widget-content-left mr-3">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/4.jpg" alt="">
+                                        </div>
+                                        <div class="widget-content-left">
+                                            <div class="widget-heading">Katherine Webster (kw)</div>
+                                            <div class="widget-subheading">Migration Team Manager</div>
+                                        </div>
+                                        <div class="widget-content-right">
+                                            <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                                <i class="pe-7s-look"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item list-group-item">
+                            <a class="nav-link " href="#profile2" role="tab" data-toggle="tab">
+                                <div class="widget-content p-0">
+                                    <div class="widget-content-wrapper">
+                                        <div class="widget-content-left mr-3">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/5.jpg" alt="">
+                                        </div>
+                                        <div class="widget-content-left">
+                                            <div class="widget-heading">Jennie Duncan(jd)</div>
+                                            <div class="widget-subheading">Billing Team Manager</div>
+                                        </div>
+                                        <div class="widget-content-right">
+                                            <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                                <i class="pe-7s-look"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class=" nav-item list-group-item ">
+                            <a class="nav-link " href="#profile3" role="tab" data-toggle="tab">
+                                <div class="widget-content p-0">
+                                    <div class="widget-content-wrapper">
+                                        <div class="widget-content-left mr-3">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/8.jpg" alt="">
+                                        </div>
+                                        <div class="widget-content-left">
+                                            <div class="widget-heading">JD Webster (jw)</div>
+                                            <div class="widget-subheading">UI/UX Team Manager</div>
+                                        </div>
+                                        <div class="widget-content-right">
+                                            <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                                <i class="pe-7s-look"></i>
+                                            </a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li class="nav-item list-group-item">
+                            <a class="nav-link " href="#profile4" role="tab" data-toggle="tab">
+                                <div class="widget-content p-0">
+                                    <div class="widget-content-wrapper">
+                                        <div class="widget-content-left mr-3">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                        </div>
+                                        <div class="widget-content-left">
+                                            <div class="widget-heading">Katherine Webster (kw)</div>
+                                            <div class="widget-subheading">Admin Team Manager</div>
+                                        </div>
+                                        <div class="widget-content-right">
+                                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                               <i class="pe-7s-look"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-item list-group-item">
+                            <a class="nav-link" href="#profile5" role="tab" data-toggle="tab">
+                                <div class="widget-content p-0">
+                                    <div class="widget-content-wrapper">
+                                        <div class="widget-content-left mr-3">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/11.jpg" alt="">
+                                        </div>
+                                        <div class="widget-content-left">
+                                            <div class="widget-heading">Jennie Duncan(jd)</div>
+                                            <div class="widget-subheading">Business Team Manager</div>
+                                        </div>
+                                        <div class="widget-content-right">
+                                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                               <i class="pe-7s-look"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item list-group-item">
+                            <a class="nav-link" href="#profile6" role="tab" data-toggle="tab">
+                                <div class="widget-content p-0">
+                                    <div class="widget-content-wrapper">
+                                        <div class="widget-content-left mr-3">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/1.jpg" alt="">
+                                        </div>
+                                        <div class="widget-content-left">
+                                            <div class="widget-heading">JD Webster (jw)</div>
+                                            <div class="widget-subheading">Account Team Manager</div>
+                                        </div>
+                                        <div class="widget-content-right">
+                                            <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                               <i class="pe-7s-look"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content team-col">
+                    <div id="profile" class="container tab-pane active">
+                        <h3 class="card-head mb-3">Team</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="card-subhead">Storage Team Members</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="search-container">
+                                    <form action="/action_page.php">
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <img src="assets/images/search_icon.svg">
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Search Managers" id="usr" name="username">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content white-box  mb-3">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left mr-3">
+                                    <img width="42" class="rounded-circle" src="assets/images/avatars/2.jpg" alt="">
+                                </div>
+                                <div class="widget-content-left ">
+                                    <div class="widget-heading">Francis Tranc (ft), <span>Storage Team Manager</span>
+                                        <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                            <i class="pe-7s-look"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+                                    </div>
+                                  
+                                        <div class="manager-info">
+                                            <a href="individual_card.html">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                            </a>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    
+                                        <div class="manager-info">
+                                            <a href="individual_card.html">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+                                            </a>
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col  text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile1" class="container tab-pane fade">
+                        <h3 class="card-head mb-3">Team</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="card-subhead">Migration Team Members</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="search-container">
+                                    <form action="/action_page.php">
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/search_icon.svg"></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Search Managers" id="usr" name="username">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content white-box mb-3">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left mr-3">
+                                    <img width="42" class="rounded-circle" src="assets/images/avatars/4.jpg" alt="">
+                                </div>
+                                <div class="widget-content-left ">
+                                    <div class="widget-heading">Katherine Webster (kw) , <span>Migration Team Manager
+                                        </span>
+                                        <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                            <i class="pe-7s-look"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+                                    </div>
+                                    <a href="manager-view.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col  text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="profile2" class="container tab-pane fade">
+                        <h3 class="card-head mb-3">Team</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="card-subhead">Billing Team Members</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="search-container">
+                                    <form action="/action_page.php">
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/search_icon.svg"></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Search Managers" id="usr" name="username">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content white-box  mb-3">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left mr-3">
+                                    <img width="42" class="rounded-circle" src="assets/images/avatars/5.jpg" alt="">
+                                </div>
+                                <div class="widget-content-left ">
+                                    <div class="widget-heading">Jennie Duncan(jd), <span>Billing Team Manager</span>
+                                        <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                            <i class="pe-7s-look"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+                                    </div>
+                                    <a href="manager-view.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col  text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile3" class="container tab-pane fade">
+                        <h3 class="card-head mb-3">Team</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="card-subhead">UI/UX Team Members</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="search-container">
+                                    <form action="/action_page.php">
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/search_icon.svg"></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Search Managers" id="usr" name="username">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content white-box mb-3">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left mr-3">
+                                    <img width="42" class="rounded-circle" src="assets/images/avatars/8.jpg" alt="">
+                                </div>
+                                <div class="widget-content-left ">
+                                    <div class="widget-heading">JD Webster (jw), <span>UI/UX Team Manager
+                                        </span>
+                                        <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                            <i class="pe-7s-look"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+                                    </div>
+                                    <a href="manager-view.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col  text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile4" class="container tab-pane fade">
+                        <h3 class="card-head mb-3">Team</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3 class="card-subhead">Admin Team Members</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="search-container">
+                                    <form action="/action_page.php">
+
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><img
+                                                        src="assets/images/search_icon.svg"></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Search Managers" id="usr" name="username">
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget-content white-box mb-3">
+                            <div class="widget-content-wrapper">
+                                <div class="widget-content-left mr-3">
+                                    <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                </div>
+                                <div class="widget-content-left ">
+                                    <div class="widget-heading">Katerine Webster(kw), <span>Admin Team Manager
+                                        </span>
+                                        <a href="manager-view.html" type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="" data-original-title="View Profile">
+                                            <i class="pe-7s-look"></i>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+                                    </div>
+                                    <a href="manager-view.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col  text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal2"><img src="assets/images/flagblue_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col text-center">
+                                <div class="card mb-3">
+                                    <div>
+                                        <a href="#" class="float-right" type="button" data-toggle="modal" data-target="#myModal1"><img src="assets/images/flagred_icon.svg"></a>
+
+                                    </div>
+
+                                    <a href="individual_card.html">
+                                        <div class="manager-info">
+                                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                                            <div class="manager-name">
+                                                <div class="widget-heading">JD Webster (jw)</div>
+
+                                                <h5>UI/UX Lead</h5>
+                                                <p>BRAVERAN-1/8142</p>
+                                                <p>(Washington)</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <!-- The Modal -->
+        <div class="modal" id="myModal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <div class="widget-content text-center p-0">
+
+                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+
+
+                            <div class="widget-heading">Francis Tranc (ft)</div>
+                            <div class="widget-subheading">Storage Team Manager</div>
+
+                        </div>
+
+                        <p class="text-danger text-center">Are you sure to remove this flag?</p>
+                    </div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer text-center">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Remove</button>
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- The Modal -->
+    <div class="modal" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Flag Escalation</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <div class="widget-content p-0">
+                        <div class="widget-content-wrapper">
+                            <div class="widget-content-left mr-3">
+                                <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+                            </div>
+                            <div class="widget-content-left">
+                                <div class="widget-heading">Francis Tranc (ft)</div>
+                                <div class="widget-subheading">Storage Team Manager</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p class="text-danger">Are you sure to escalate this talent?</p>
+                    <div class="form-group">
+                        <label for="comment">Reason/Comment</label>
+                        <span class="star">*</span>
+                        <textarea class="form-control" rows="3" id="comment"></textarea>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal">Esclate</button>
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <script type="text/javascript" src="./assets/scripts/main.js"></script>
+
+</body>
+
+</html>

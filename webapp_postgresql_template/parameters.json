@@ -1,0 +1,72 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "databaseName": {
+            "value": ""
+        },
+        "administratorLogin": {
+            "value": ""
+        },
+        "administratorLoginPassword": {
+            "value": ""
+        },
+        "mysqLocation": {
+            "value": "West US 2"
+        },
+        "serverName": {
+            "value": ""
+        },
+        "skuCapacity": {
+            "value": 4
+        },
+        "skuFamily": {
+            "value": "Gen5"
+        },
+        "skuName": {
+            "value": "GP_Gen5_4"
+        },
+        "skuSizeMB": {
+            "value": 102400
+        },
+        "skuTier": {
+            "value": "GeneralPurpose"
+        },
+        "storageMB": {
+            "value": 102400
+        },
+        "backupRetentionDays": {
+            "value": 7
+        },
+        "geoRedundantBackup": {
+            "value": "Disabled"
+        },
+        "version": {
+            "value": "10"
+        },
+        "collation": {
+            "value": "en_US.utf8"
+        },
+        "charset": {
+            "value": "utf8"
+        },
+        "name": {
+            "value": ""
+        },
+        "hostingPlanName": {
+            "value": "nodejsvvk2te73mj5la-plan"
+        },
+        "hostingEnvironment": {
+            "value": ""
+        },
+        "location": {
+            "value": "West US 2"
+        },
+        "serverFarmResourceGroup": {
+            "value": "test_rg"
+        },
+        "subscriptionId": {
+            "value": "5ba10a19-42d5-42fc-a9aa-0e7b174a29ba"
+        }
+    }
+}

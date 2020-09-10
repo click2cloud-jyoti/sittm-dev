@@ -1,0 +1,462 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> -->
+    <title>Azure Cloud and AI Technical Talent Management</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <!-- <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Azure Cloud and AI Technical Talent Management">
+    <meta name="msapplication-tap-highlight" content="no"> -->
+    <!--
+    =========================================================
+    * ArchitectUI HTML Theme Dashboard - v1.0.0
+    =========================================================
+    * Product Page: https://dashboardpack.com
+    * Copyright 2019 DashboardPack (https://dashboardpack.com)
+    * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+    =========================================================
+    * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <script src="<%= angularJS %>"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .main-tab-container {
+            background: #fff;
+            height: 70px;
+            padding: 0px 150px;
+            box-shadow: 0px 7px 10px rgba(204, 204, 204, 0.25098039215686274);
+            margin-bottom: 20px;
+        }
+        
+        .main-title {
+            color: #9B9B9B;
+            font-weight: 500;
+            font-size: 25px;
+            display: flex;
+            margin: 0;
+            height: 70px;
+            align-items: center;
+        }
+        
+        .main-tabs.card-header {
+            background-color: transparent;
+            height: 70px;
+        }
+        
+        .main-tabs.card-header>.nav .nav-link {
+            color: #404042;
+            text-transform: uppercase;
+        }
+        
+        .main-tabs.card-header.card-header-tab .nav {
+            margin-left: 0;
+            height: auto;
+            align-self: flex-end;
+        }
+        
+        .main-tabs.nav-link {
+            padding: 12px 22px;
+        }
+        
+        .main-tabs.card-header>.nav .nav-link.active {
+            color: #5C73B7 !important;
+        }
+        
+        .main-tabs.card-header>.nav .nav-link::before {
+            background: #4F71ED;
+            height: 3px;
+            border-radius: 0;
+            bottom: 0px;
+        }
+        
+        .img-responsive {
+            width: 80px;
+        }
+        
+        .main-tab-content object {
+            width: 100%;
+        }
+        /* LOGIN/LOGOUT SECTION */
+        
+        .top-navbar .nav-item .sign_in_btn.nav-link {
+            background: #f44c76;
+            margin-top: 0px;
+            padding: 12px 15px 15px 15px !important;
+            float: right;
+            color: #fff !important;
+            font-size: 14px !important;
+        }
+        
+        .sign_in_btn:hover {
+            color: #ffb5c8 !important;
+        }
+        
+        .dropdown-toggle::after {
+            position: relative;
+            top: 0px;
+            opacity: .8;
+            margin-left: 0px;
+        }
+        
+        .dm {
+            position: absolute !important;
+            transform: none !important;
+            top: 70px !important;
+            right: 0px !important;
+            will-change: unset !important;
+            left: -165px !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="indexApp" ng-controller="indexController" ng-cloak>
+        <div class='main-tab-container' ng-init="init('<%= JSON.stringify(data) %>')">
+            <nav class="navbar top-navbar navbar-expand-md navbar-light">
+                <a class="navbar-brand" href="#"><img src="images/logo.svg" class="img-responsive"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="card-header-tab main-tabs card-header">
+                        <ul class="navbar-nav mr-auto nav" id="mainmenuid">
+                            <li class="nav-item" ng-show="User.email"><a data-toggle="tab" href="#home" class="active nav-link" id="homeLink">Home</a></li>
+                            <li class="nav-item" ng-if="User.email"><a data-toggle="tab" id="managerialViewLink" href="#managerialView" class="nav-link">Managerial View
+                                </a>
+                            </li>
+                            <li class="nav-item" ng-if="User.email"><a data-toggle="tab" id="individualCardLink" href="#individualCard" class="nav-link disabled">Individual
+                                    Card</a>
+                            </li>
+                            <li class="nav-item" ng-if="User.email"><a data-toggle="tab" id="nominateTalentLink" href="#nominateTalent" class="nav-link">Nominate a
+                                    Talent</a></li>
+                            <li class="nav-item" ng-if="User.email"><a data-toggle="tab" id="addManagerLink" href="#add_manager" class="nav-link">Add Manager</a></li>
+                            <li class="nav-item dropdown" ng-if="User.email">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="dropdownMenuOther" role="button" aria-haspopup="true" aria-expanded="false">Other</a>
+                                <div class="dropdown-menu otherDropdown" id="otherMenu" aria-labelledby="otherMenu">
+
+                                    <a data-toggle="tab" href="#tzView" class="dropdown-item" id="tzViewLink">Tz
+                                        View</a>
+
+
+                                    <a data-toggle="tab" href="#globalView" class="dropdown-item" id="globalViewLink">Global
+                                        View</a>
+
+
+
+                                    <a data-toggle="tab" href="#access" class="dropdown-item" id="accessLink">Access</a>
+
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <ul class="navbar-nav justify-content-end">
+                            <li class="nav-item notification-nav dropdown" ng-show="notificationshow">
+                                <a class="nav-link notification-btn position-relative d-inline-block dropdown-toggle" ng-click="getNotificationData()" id="notificationBtn" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <img class="notification-icon" src="images/notification_icon.svg">
+                                    <div class="notification-count position-absolute">{{list_length}}</div>
+                                </a>
+                                <ul class="notification-dropdown dropdown-menu" id="notificationDropdown" aria-labelledby="notificationDropdown">
+                                    <li class="notification-dropdown-header">
+                                        <div class="pull-left">
+                                            <h5>Notification nomination approval</h5>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+                                    </li>
+                                    <div class="notification-dropdown-body">
+                                        <li ng-repeat="datas in entries">
+                                            <p class="date text-right">{{datas.created_at}}</p>
+                                            <div class="media notification-media">
+                                                <div class="media-left media-middle">
+                                                    <a href="#">
+                                                        <img class="media-object" src="images/avatars/4.jpg">
+                                                    </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="row mx-0">
+                                                        <div class="col-sm-7 col-12">
+                                                            <h4 class="media-heading">{{datas.name}}</h4>
+                                                            <!-- <p class="team-name">UI/UX Team</p> -->
+                                                            <p class="nominated-by-p">Nominated By : <span class="nominated-by">{{datas.manager}}</span></p>
+                                                        </div>
+                                                        <div class="col-sm-5 col-12 btn_container">
+                                                            <button type="button" class="btn btn-primary mr_5" ng-click="approval(datas,'Approved')">Approve</button>
+                                                            <button type="button" class="btn btn-secondary" ng-click="approval(datas,'Rejected')">Reject</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </li>
+
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown" ng-if="User.email">
+                                <a class="nav-link dropdown-toggle user_profile_dropdown pull-right pr_0 avatar_section" style="padding-right:0px !important;" data-toggle="dropdown" id="dropdownMenuButton" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <!-- <img src="{{ user.avatar }}" class="rounded-circle align-self-center mr-2" style="width: 32px;"> -->
+
+                                    <!-- <i class="far fa-user-circle fa-lg rounded-circle align-self-center"></i> -->
+                                    <img src="images/users/user_default.png" class="rounded-circle align-self-center" style="width: 30px; margin-right: 5px;" />
+
+                                </a>
+                                <div class="dropdown-menu  dropdown-menu-right dm" id="userProfileMenu" aria-labelledby="dropdownMenuButton">
+                                    <div class="row mx-0">
+                                        <div class="col-md-2 col-sm-2 col-12 profile-img-container" style="padding:0px">
+                                            <img src="images/users/user_default.png" class="rounded-circle" />
+                                        </div>
+                                        <div class="col-md-10 col-sm-10 col-12" style="padding-left: 30px;padding-top: 15px;">
+                                            <h5 class="dropdown-item-text mb-0" style="padding: 0px 15px 0px 0px;">
+                                                {{User.displayName}}</h5>
+                                            <p class="dropdown-item-text text-muted mb-0" style="padding: 0px 15px 0px 0px;">{{User.email}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <a href="/auth/signout" class="dropdown-item signout_btn"><i
+                                                class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Sign Out</a>
+                                    </div>
+
+                                </div>
+                            </li>
+                            <li class="nav-item" ng-if="!User.email">
+                                <a href="/auth/signin" class="nav-link btn sign_in_btn pull-right" id="ssosignin"><i
+                                        class="fa fa-sign-in" aria-hidden="true"></i>&nbsp;Sign In</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="tab-content main-tab-content" id="pageArea">
+            <!--Home Tab Start-->
+            <div class="tab-pane active" id="home" role="tabpanel">
+                <object data="/home" style="margin-top:-20px;"></object>
+            </div>
+            <!--Home Tab End-->
+            <!--Managerial View   Tab Start-->
+            <div class="tab-pane" id="managerialView" role="tabpanel" ng-if="User.email">
+                <object data="/individual-card-manager"></object> 
+            </div>
+            <!--Managerial View Tab End-->
+            <!--Individual Card Tab Start-->
+            <div class="tab-pane" id="individualCard" role="tabpanel" ng-if="User.email">
+                <object data="/manager-view"></object>
+            </div>
+            <!--Individual Card Tab End-->
+
+            <!--tzView Tab Start-->
+            <div class="tab-pane" id="tzView" role="tabpanel" ng-if="User.email">
+                <object data="/dashboard"></object>
+            </div>
+            <!--tzView Tab End-->
+
+            <!--globalView Tab Start-->
+            <div class="tab-pane" id="globalView" role="tabpanel" ng-if="User.email">
+
+            </div>
+            <!--globalView Tab End-->
+
+            <!--nominateTalent Tab Start -->
+            <div class="tab-pane" id="nominateTalent" role="tabpanel" ng-if="User.email">
+                <object data="/nominate-talent" style="margin-top:-20px;"></object>
+            </div>
+            <!--nominateTalent Tab End-->
+
+            <!--access Tab Start -->
+            <div class="tab-pane" id="access" role="tabpanel" ng-if="User.email">
+
+            </div>
+
+            <div class="tab-pane" id="add_manager" role="tabpanel" ng-if="User.email">
+                <object data="/add_manager" style="margin-top:-20px;"></object>
+            </div>
+            <!--access Tab End-->
+        </div>
+    </div>
+    <script>
+        angular.module('indexApp', []).controller('indexController', function($scope, $http) {
+            $scope.init = function(data) {
+                $scope.User = {
+                    displayName: null,
+                    email: null
+                }
+                userData = JSON.parse(data);
+                // $scope.$apply(function () {
+                //     $scope.User = userData.user || undefined;
+                // });
+
+                $scope.User = {
+                    displayName: userData.user.displayName,
+                    email: userData.user.email
+                }
+                console.log($scope.User);
+                $scope.getNotificationData()
+
+            }
+
+            //get notificationentries
+            $scope.getNotificationData = async function() {
+                $scope.entries = []
+                $scope.notificationshow = true
+                $http({
+                    "method": "POST",
+                    "url": "api/check_admin",
+                    "data": {
+                        "user": $scope.User
+                    }
+                }).then(function(response) {
+                    console.log(response);
+                    var tempJson = response.data || {};
+                    if (!tempJson.login) {
+                        $scope.notificationshow = false
+                    } else {
+                        $scope.res_val = tempJson.data || {};
+                        if ($scope.res_val != null) {
+                            if ($scope.res_val.length != 0) {
+                                $scope.notificationshow = true
+                                $http({
+                                    "method": "POST",
+                                    "url": "api/getNotificationsList",
+                                    "data": {
+                                        "mode": "get_entries"
+                                    }
+                                }).then(function(response) {
+                                    console.log(response);
+                                    var tempJson = response.data || {};
+                                    if (!tempJson.login) {
+                                        pageRefreshLog();
+                                    } else {
+                                        $scope.list = tempJson.data || {};
+
+                                        if ($scope.list != null) {
+                                            if ($scope.list.length != 0) {
+                                                for (j = 0; j < $scope.list.length; j++) {
+                                                    b = $scope.list[j].date
+                                                    dateval = new Date(b).toDateString().split(" ").reverse()[1] + " " + new Date(b).toDateString().split(" ").reverse()[2] + ", " + new Date(b).toDateString().split(" ").reverse()[0]
+                                                    $scope.entries.push({
+                                                        "name": $scope.list[j].nominee_name,
+                                                        "manager": $scope.list[j].nominated_by,
+                                                        "created_at": dateval,
+                                                        "reporting_authority": $scope.list[j].reporting_authority
+                                                    })
+                                                }
+                                            }
+                                        }
+                                        $scope.list_length = $scope.entries.length
+                                        console.log("Entries")
+                                        console.log($scope.entries)
+                                    }
+                                }, function(err) {
+                                    console.log(err)
+                                })
+                            } else {
+                                $scope.notificationshow = false
+                            }
+                        } else {
+                            $scope.notificationshow = false
+                        }
+
+                    }
+                }, function(err) {
+                    console.log(err)
+                })
+
+            }
+
+            $scope.approval = async function(info, mode) {
+                pass_data = info
+                pass_data.user = $scope.User
+                pass_data.status = mode
+                $http({
+                    "method": "POST",
+                    "url": "api/updateNotificationEntries",
+                    "data": pass_data
+                }).then(function(response) {
+                    console.log(response);
+                    var tempJson = response.data || {};
+                    if (!tempJson.login) {
+                        pageRefreshLog();
+                    } else {
+                        $scope.approvestatus = tempJson.data[0].status || {};
+                        $scope.getNotificationData()
+
+                    }
+                }, function(err) {
+                    console.log(err)
+                })
+            }
+
+            async function pageRefreshLog() {
+                window.parent.location.reload(true);
+            }
+        })
+    </script>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/main.js"></script>
+<script>
+    var x = window.innerHeight - 95 + 'px';
+    var elem = document.getElementsByTagName("object");
+    for (var i = 0; i < elem.length; i++) {
+        elem[i].style.height = x;
+    }
+
+    $(document).ready(function() {
+        $("#tzViewLink").click(function() {
+            $("#otherMenu").removeClass("show");
+            $("#navbarSupportedContent").removeClass("show");
+
+        });
+        $("#globalViewLink").click(function() {
+            $("#otherMenu").removeClass("show");
+            $("#navbarSupportedContent").removeClass("show");
+
+        });
+        $("#accessLink").click(function() {
+            $("#otherMenu").removeClass("show");
+            $("#navbarSupportedContent").removeClass("show");
+
+        });
+        $("#homeLink").click(function() {
+            $("#navbarSupportedContent").removeClass("show");
+
+        });
+        $("#managerialViewLink").click(function() {
+            $("#navbarSupportedContent").removeClass("show");
+
+        });
+        $("#individualCardLink").click(function() {
+            $("#navbarSupportedContent").removeClass("show");
+
+        });
+        $("#nominateTalentLink").click(function() {
+            $("#navbarSupportedContent").removeClass("show");
+
+        });
+        $("#addManagerLink").click(function() {
+            $("#navbarSupportedContent").removeClass("show");
+
+        });
+    });
+</script>
+
+</body>
+
+</html>

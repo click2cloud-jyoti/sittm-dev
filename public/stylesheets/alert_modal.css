@@ -1,0 +1,202 @@
+    /*.......... alert popup css ............ */
+    .alert-modal {
+        width: 450px !important;
+        margin: 30px auto !important;
+    }
+
+    .modal_alert {
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.50);
+        height: 100% !important;
+        margin-top: 0px !important;
+    }
+
+    .modal-dialog {
+        position: relative;
+        width: auto;
+        margin: .5rem;
+        pointer-events: all !important;
+    }
+
+    .modal_alert_content {
+        -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+        box-shadow: 0 5px 15px rgba(101, 101, 101, 0.5);
+        position: relative;
+        border-radius: 6px;
+        outline: 0;
+        text-align: center;
+    }
+
+    .modal_alert_body {
+        background-color: #fff !important;
+        border-radius: 6px 6px 0px 0px;
+        border: 1px solid #fff;
+        max-height: 425px;
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .modal_alert_footer {
+        position: relative;
+    }
+
+    .modal_alert_footer_migrate {
+        display: flex;
+    }
+
+    .modal_alert_body img {
+        padding-top: 2%;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .modal_alert_body .alert_title {
+        font-size: 25px;
+    }
+
+    .modal_alert_body .alert_subtitle {
+        color: #787878;
+        font-size: 17px;
+        margin: 10px 0px 15px;
+        letter-spacing: 1px;
+        font-family: sans-serif;
+    }
+
+    .alert_title_info {
+        color: #5b84f8;
+    }
+
+    .alert_title_error {
+        color: #ff5b59;
+    }
+
+    .alert_title_migrate {
+        color: #8543c7;
+    }
+
+    .alert_title_success {
+        color: #1bbc9b;
+    }
+
+    .alert_title_warning {
+        color: #f5a623;
+    }
+
+    .btn_info {
+        width: 100%;
+        border-radius: 0px 0px 6px 6px;
+        padding: 3%;
+        color: #fff;
+        font-size: 17px;
+        background-color: #5b84f8 !important;
+        border: 1px solid #5b84f8 !important;
+        cursor: pointer;
+    }
+
+    .btn_info:hover,
+    .btn_info:focus {
+        color: #fff !important;
+        background-color: #3367fc !important;
+        border: 1px solid #3367fc !important;
+    }
+
+    .btn_error {
+        width: 100%;
+        border-radius: 0px 0px 6px 6px;
+        padding: 3%;
+        color: #fff;
+        font-size: 17px;
+        background-color: #ff5b59 !important;
+        border: 1px solid #ff5b59 !important;
+        cursor: pointer;
+    }
+
+    .btn_error:hover,
+    .btn_error:focus {
+        color: #fff !important;
+        background-color: #f93a38 !important;
+        border: 1px solid #f93a38 !important;
+    }
+
+    .btn_secondary {
+        width: 50%;
+        border-radius: 0px 0px 0px 6px;
+        padding: 3%;
+        color: #fff;
+        font-size: 17px;
+        background-color: #9b9b9b !important;
+        border: 1px solid #9b9b9b !important;
+        cursor: pointer;
+    }
+
+    .btn_secondary:hover,
+    .btn_secondary:focus {
+        color: #fff !important;
+        background-color: #777575 !important;
+        border: 1px solid #777575 !important;
+    }
+
+    .btn_migrate {
+        width: 50%;
+        border-radius: 0px 0px 6px 0px;
+        padding: 3%;
+        color: #fff;
+        font-size: 17px;
+        background-color: #8543c7 !important;
+        border-color: #8543c7 !important;
+        cursor: pointer;
+    }
+
+    .btn_migrate:hover,
+    .btn_migrate:focus {
+        color: #fff !important;
+        background-color: #7b08ef !important;
+        border: 1px solid #7b08ef !important;
+    }
+
+    .btn_success {
+        width: 100%;
+        border-radius: 0px 0px 6px 6px;
+        padding: 3%;
+        color: #fff;
+        font-size: 17px;
+        background-color: #4cae4c !important;
+        border: 1px solid #4cae4c !important;
+        cursor: pointer;
+    }
+
+    .btn_success:hover,
+    .btn_success:focus {
+        color: #fff !important;
+        background-color: #449d44 !important;
+        border: 1px solid #449d44 !important;
+    }
+
+    .btn_warning {
+        width: 100%;
+        border-radius: 0px 0px 6px 6px;
+        padding: 3%;
+        color: #fff;
+        font-size: 17px;
+        background-color: #f5a623 !important;
+        border-color: #f5a623 !important;
+        cursor: pointer;
+    }
+
+    .btn_warning:hover,
+    .btn_warning:focus {
+        color: #fff !important;
+        background-color: #f29b0a !important;
+        border: 1px solid #f29b0a !important;
+    }
+
+    .modal_alert_dialog {
+        margin: 30px auto !important;
+    }
+
+    /*.......... end of alert popup css ............ */
+    .cust_btn {
+        width: auto !important;
+        border-radius: 4px !important;
+        padding: 6px 15px !important;
+    }

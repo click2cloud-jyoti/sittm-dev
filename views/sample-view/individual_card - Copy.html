@@ -1,0 +1,2095 @@
+<!doctype html>
+<html class="nicescroll-h-100" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Language" content="en">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
+        <meta name="description" content="This is an example dashboard created using build-in elements and components.">
+        <meta name="msapplication-tap-highlight" content="no">
+        <!--
+        =========================================================
+        * ArchitectUI HTML Theme Dashboard - v1.0.0
+        =========================================================
+        * Product Page: https://dashboardpack.com
+        * Copyright 2019 DashboardPack (https://dashboardpack.com)
+        * Licensed under MIT (https://github.com/DashboardPack/architectui-html-theme-free/blob/master/LICENSE)
+        =========================================================
+        * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        -->
+        <link href="./main.css" rel="stylesheet">
+        <!--------Added by Sohel-------->
+        <link href="individual_card.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+
+        <style>
+            .banner {
+                padding-top: 140px;
+                color: #fff
+            }
+
+            h1 {
+                margin-bottom: 40px
+            }
+
+            .banner a {
+                background: #fb4f77f7;
+                color: #fff;
+                padding: 12px 50px;
+                font-size: 15px;
+                border-radius: 2px
+            }
+
+            #hero-banner {
+                background: url('./assets/images/banner.png')0 0 no-repeat;
+                height: 400px;
+                margin-bottom: 35px;
+                background-size: cover;
+            }
+
+            .first_column_flag {
+                background-image: url("assets/images/icons/flagred_icon.svg");
+                background-repeat: no-repeat;
+                background-origin: content-box;
+                background-size: 12px;
+                border: 1px solid #eee;
+                border-radius: 50%;
+                padding: 5px 8px;
+                height: 30px;
+                width: 30px;
+                background-color: #fff;
+                position: absolute;
+                right: 30px;
+                top: 5px;
+                cursor: pointer;
+            }
+
+            /*.accordion .card-header:after {
+                font-family: 'FontAwesome';  
+                content: "\f068";
+                float: right; 
+                }
+                .accordion .card-header.collapsed:after {
+                    content: "\f067"; 
+                }*/
+
+            .accordion .card-header.collapsed:after {
+                /* symbol for "collapsed" panels */
+                content: "";
+                background-image: url("assets/images/icons/Add_icon.svg");
+                background-repeat: no-repeat;
+                background-size: 27px;
+                position: relative;
+                right: 12px;
+                background-position: right;
+                padding: 15px;
+                float: right;
+                bottom: 0px;
+                cursor: pointer !important;
+            }
+
+            .accordion .card-header:after {
+                content: "";
+                background-image: url("assets/images/icons/minus_icon.svg");
+                background-repeat: no-repeat;
+                background-size: 27px;
+                position: relative;
+                right: 12px;
+                background-position: right;
+                padding: 15px;
+                float: right;
+                bottom: 0px;
+                cursor: pointer !important;
+            }
+
+            .card-title {
+                width: 100%;
+                cursor: pointer;
+            }
+
+            .card {
+                position: relative;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                min-width: 0;
+                word-wrap: break-word;
+                background-color: #fff;
+                background-clip: border-box;
+                border: 1px solid rgb(200, 209, 214);
+                border-radius: 3px !important;
+            }
+
+            .card-body {
+                height: 600px;
+                overflow: auto;
+                padding: 0px 10px 10px 10px !important;
+            }
+
+            .card-header {
+                padding: 10px !important;
+                margin-bottom: 0;
+                background-color: rgb(238, 249, 255) !important;
+                border-bottom: 1px solid rgb(202, 211, 216) !important;
+                height: 40px !important;
+            }
+
+            .accordion>.card>.card-header {
+                border-radius: 0;
+                margin-bottom: 0px !important;
+            }
+
+            .card-header,
+            .card-title {
+                text-transform: none;
+                color: rgb(67, 116, 255) !important;
+                font-weight: 500;
+                font-size: 13px;
+                margin-bottom: 0px;
+            }
+
+            .tech_section h4 {
+                padding-left: 15px;
+                margin-bottom: 15px;
+            }
+
+            #tags .edit_remove_input {
+                display: inline-block;
+                margin: 0px !important;
+                position: relative;
+            }
+
+            .tag_input {
+                border-radius: 50px;
+                background: #fff;
+                border: 1px solid #fff !important;
+                font-size: 12px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #666 !important;
+                padding: 5px 30px 5px 5px !important;
+            }
+
+            .edit_remove_input {
+                display: block;
+                margin: 20px;
+                width: auto;
+                font-family: serif;
+                height: 34px;
+            }
+
+            #tags {
+                background: #eef9ff;
+                display: inline-block;
+                justify-content: center;
+                flex-direction: column;
+                padding: 4px 2px 9px 2px;
+                width: 100%;
+            }
+
+            .edit_tag {
+                background-image: url(assets/images/icons/cross_icon.svg);
+                background-repeat: no-repeat;
+                background-size: 10px;
+                position: absolute;
+                right: 15px;
+                background-position: right;
+                padding: 10px;
+                cursor: pointer;
+                top: 8px;
+            }
+
+            .edit_search_tag {
+                background-image: url("assets/images/icons/search_icon.svg");
+                background-repeat: no-repeat;
+                background-size: 13px;
+                position: relative;
+                right: 12px;
+                background-position: right;
+                padding: 10px;
+                float: right;
+                top: 5px;
+                cursor: pointer;
+            }
+
+            .motivate_text {
+                background: #fff;
+                border-radius: 50px;
+                height: 30px;
+                margin: 5px 5px;
+                width: 100%;
+                font-size: 12px !important;
+                position: relative;
+                padding: 7px 35px 7px 15px;
+                height: 33px;
+            }
+
+            .motivate_text .removeicon {
+                background-image: url("assets/images/icons/cross_icon.svg");
+                background-repeat: no-repeat;
+                background-size: 10px;
+                position: relative;
+                right: 0px;
+                background-position: right;
+                padding: 10px;
+                float: right;
+                position: absolute;
+                right: 12px;
+                top: 6px;
+            }
+
+            .motivate_text.active-project .removeicon {
+                background-image: url("assets/images/cross_delete_white_icon.svg");
+            }
+
+            .readOnly form select {
+                border: 1px solid #fff;
+                background: #fff;
+            }
+
+            .readOnly form textarea {
+                border: 1px solid #fff;
+                background: #fff;
+                resize: none;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+                -webkit-line-clamp: 3;
+                line-height: 1.5rem;
+                margin: 0 0 4px 0;
+                display: block;
+                text-align: justify;
+                height: 54px;
+            }
+
+            .readOnly form select::-ms-expand {
+                display: none;
+            }
+
+            .readOnly form select {
+                -webkit-appearance: none;
+                appearance: none;
+            }
+
+            .readOnly form #tags {
+                background: #fff;
+            }
+
+            .readOnly form .tag_input {
+                border-radius: 50px;
+                background: #eef9ff;
+                border: 1px solid #eef9ff !important;
+                padding: 5px 30px 5px 5px !important;
+                position: relative;
+                line-height: 14px;
+
+            }
+
+            .edit_select {
+                width: 100%;
+                height: 35px;
+                background: #eef9ff;
+                border-radius: 3px;
+                border: 1px solid #c8d1d6;
+                color: #323232 !important;
+                font-size: 14px !important;
+                font-weight: 700 !important;
+                cursor: pointer;
+            }
+
+            .edit_select_2 {
+                width: 100%;
+                height: 35px;
+                background: #eef9ff;
+                border-radius: 3px;
+                border: 1px solid #c8d1d6;
+                color: #a5a6a7 !important;
+                font-size: 14px !important;
+                font-weight: 100 !important;
+                cursor: pointer;
+            }
+
+            .edit_textarea {
+                width: 100%;
+                background: #eef9ff;
+                border: 1px solid #c8d1d6;
+                color: #222;
+                font-size: 12px;
+                height: 90px;
+                padding: 5px;
+            }
+
+            .edit_radio {
+                display: flex;
+            }
+
+            .formSection {
+                padding: 0px;
+                margin-bottom: 10px;
+                transition: background 0.4s ease;
+                background: #fff!important
+            }
+            .formSection form{
+                padding: 0px;
+            }
+
+            .tech_section h4.panel-title {
+                padding-left: 0px;
+            }
+
+            .formSection * {
+                transition: opacity 0.4s ease;
+            }
+
+            label,
+            input,
+            button {
+                display: block;
+                margin: 5px;
+            }
+
+            input {
+                background: transparent;
+                border: 1px solid #ccc;
+                padding: 2px 1px;
+            }
+
+            label {
+                padding-left: 2px;
+                font-weight: bold;
+                font-size: 12px;
+                text-transform: none;
+            }
+
+            .actionButtons {
+                margin: 15px 15px 0px 0px;
+            }
+
+            .cancelButton {
+                margin-right: 10px;
+                color: #4374ff;
+                font-weight: 400;
+                text-decoration: none;
+                font-size: 12px;
+            }
+
+            .saveButton {
+                display: inline-block;
+                padding: 2px 8px 2px 8px;
+                background: #4374ff;
+                color: #fff;
+                border: 2px solid #fff;
+                cursor: pointer !important;
+                float: right;
+                margin: 0px;
+                line-height: 18px !important;
+                font-size: 14px;
+                font-weight: 100;
+                border-radius: 5px;
+                width: 60px;
+                /* transition: background 0.4s ease;
+                    background-image: url(assets/images/icons/Edit_icon.svg);
+                    background-repeat: no-repeat; */
+            }
+
+            .cancelButton1 {
+                display: inline-block;
+                padding: 2px 8px 2px 8px;
+                background: #9E9E9E;
+                color: #fff;
+                border: 2px solid #fff;
+                cursor: pointer !important;
+                float: right;
+                margin: 0px;
+                line-height: 18px !important;
+                font-size: 14px;
+                font-weight: 100;
+                border-radius: 5px;
+                margin-left: 5px;
+                width: 60px;
+                /* transition: background 0.4s ease;
+                    background-image: url(assets/images/icons/Edit_icon.svg);
+                    background-repeat: no-repeat; */
+            }
+
+            /* .saveButton:hover,.editButton:hover{background:none;} */
+
+            .editButton {
+                display: none;
+                margin: 15px 0px 0px 15px;
+                padding: 12px;
+                background: #ffffff;
+                color: #fff;
+                border: 2px solid #fff;
+                transition: background 0.4s ease;
+                background-image: url("assets/images/icons/Edit_icon.svg");
+                background-repeat: no-repeat;
+                background-size: 20px;
+            }
+
+            .input-group-addon {
+                padding: 12px 12px;
+                font-weight: 400;
+                line-height: 1;
+                color: #555;
+                text-align: center;
+                background-color: #fff;
+                border: 1px solid #fff;
+                border-radius: 4px;
+                background-image: url(assets/images/icons/calendar_active.svg);
+                background-repeat: no-repeat;
+                background-size: 20px;
+                position: absolute;
+                float: right;
+                right: 0px;
+                z-index: 999;
+                top: 6px;
+            }
+
+            /* .formSection.readOnly {background:#e5f6ea;} */
+
+            input[disabled] {
+                color: #000;
+                border-color: transparent;
+            }
+
+            .readOnly .actionButtons {
+                display: none;
+            }
+
+            .readOnly .editButton {
+                display: block;
+                cursor: pointer;
+            }
+
+            .formSection.disabled * {
+                opacity: .5;
+            }
+
+            .disabled .editButton {
+                display: block;
+                cursor: default;
+            }
+
+            .disabled .editButton:hover {
+                background: #9db0a3;
+            }
+
+            ::-webkit-scrollbar {
+                width: 7px;
+                height: 7px;
+            }
+
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey;
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #98cbe6;
+                border-radius: 10px;
+            }
+
+            ::-webkit-scrollbar-thumb:hover {
+                background: #4374ff;
+            }
+
+            .project-box {
+                height: 309px;
+            }
+
+            .project-box .motivate_text {
+                width: auto;
+            }
+
+            .updates p {
+                font-size: 14px;
+            }
+
+            .updates p span {
+                color: #4f7cfb;
+            }
+
+            .main-head a {
+                font-size: 17px;
+                color: #4f7cfb;
+                font-weight: 600;
+            }
+
+            .main-head a:hover {
+                text-decoration: none;
+                color: #4f7cfb;
+            }
+
+            .app-main .app-main__inner {
+                padding: 0px 30px 0;
+                flex: 1;
+            }
+
+            .modal h5 {
+                margin-bottom: 0;
+                line-height: 1.5;
+                font-size: 17px;
+                color: #4f7cfb;
+                font-weight: 400;
+            }
+
+            .btn-primary {
+                color: #fff;
+                background-color: #4075FF;
+                border-color: #4075FF;
+            }
+
+            .btn-primary:hover {
+                color: #fff;
+                background-color: #2955c8;
+                border-color: #2651be
+            }
+
+            .btn-primary:focus,
+            .btn-primary.focus {
+                box-shadow: 0 0 0 0 rgba(92, 128, 222, 0.5)
+            }
+
+            .btn-primary.disabled,
+            .btn-primary:disabled {
+                color: #fff;
+                background-color: #3f6ad8;
+                border-color: #3f6ad8
+            }
+
+            .btn-primary:not(:disabled):not(.disabled):active,
+            .btn-primary:not(:disabled):not(.disabled).active,
+            .show>.btn-primary.dropdown-toggle {
+                color: #fff;
+                background-color: #2651be;
+                border-color: #244cb3
+            }
+
+            .btn-primary:not(:disabled):not(.disabled):active:focus,
+            .btn-primary:not(:disabled):not(.disabled).active:focus,
+            .show>.btn-primary.dropdown-toggle:focus {
+                box-shadow: 0 0 0 0 rgba(92, 128, 222, 0.5)
+            }
+
+            .btn-danger {
+                color: #fff;
+                background-color: #d92550;
+                border-color: #d92550;
+            }
+
+            .btn-danger:hover {
+                color: #fff;
+                background-color: #b81f44;
+                border-color: #ad1e40
+            }
+
+            .btn-danger:focus,
+            .btn-danger.focus {
+                box-shadow: 0 0 0 0 rgba(223, 70, 106, 0.5)
+            }
+
+            .btn-danger.disabled,
+            .btn-danger:disabled {
+                color: #fff;
+                background-color: #d92550;
+                border-color: #d92550
+            }
+
+            .btn-danger:not(:disabled):not(.disabled):active,
+            .btn-danger:not(:disabled):not(.disabled).active,
+            .show>.btn-danger.dropdown-toggle {
+                color: #fff;
+                background-color: #ad1e40;
+                border-color: #a31c3c
+            }
+
+            .btn-danger:not(:disabled):not(.disabled):active:focus,
+            .btn-danger:not(:disabled):not(.disabled).active:focus,
+            .show>.btn-danger.dropdown-toggle:focus {
+                box-shadow: 0 0 0 0 rgba(223, 70, 106, 0.5)
+            }
+
+            .modal-content {
+                border-radius: 0.25rem !important;
+            }
+
+            .tooltip {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            .motivation_section h4 {
+                color: #232323;
+                font-size: 19px !important;
+            }
+        </style>
+    </head>
+
+    <body class="nicescroll" tabindex="5000" id="individualBody" style="overflow: hidden; outline: none;">
+        <section class="d-none" id="hero-banner">
+            <div class="container">
+                <div class="banner">
+                    <h1>Secure Infrastructure Technical Talent Management</h1>
+                    <a href="#" type="button" data-toggle="modal" data-target="#myModal">Nominate a Talent</a>
+                </div>
+                <!-- Modal -->
+                <!-- The Modal -->
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Nominate a Talent</h4>
+
+                            </div>
+
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="uname">Alias </label>
+                                                <input type="text" class="form-control" id="uname"
+                                                       placeholder="Enter username" name="uname">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="sel1">Mobility</label>
+                                                <select class="form-control" id="sel1">
+                                                    <option>Yes</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="sel2">Travel Tolerance</label>
+                                                <select class="form-control" id="sel2">
+                                                    <option>Medium</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                </select>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="sel4">Project</label>
+                                                <select class="form-control" id="sel4">
+                                                    <option></option>
+                                                    <option>Low</option>
+                                                    <option>High</option>
+
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="">Motivational Factor</label>
+                                                <div class="input-group ">
+                                                    <input type="text" class="form-control border-right-0" placeholder="">
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text"><img
+                                                                src="assets/images/search_icon.svg"></span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="sel4">Trainings</label>
+                                                <select class="form-control" id="sel4">
+                                                    <option>Medium</option>
+                                                    <option>Low</option>
+                                                    <option>High</option>
+
+                                                </select>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+
+
+                                                <label for="sel4">Area of Inteest </label>
+                                                <input type="text" class="form-control" id="interest" placeholder=""
+                                                       name="interest">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+
+
+                                                <label for="sel4">Quick Facts</label>
+                                                <input type="text" class="form-control" id="facts" placeholder=""
+                                                       name="facts">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+
+
+                                                <label for="sel4">Deliverables</label>
+                                                <input type="text" class="form-control" id="deliver" placeholder=""
+                                                       name="deliver">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header page-container">
+
+            <div class="app-main">
+                <div class="app-main__outer">
+                    <div class="app-main__inner">
+
+                        <div class="row ">
+                            <div class="col-md-8">
+                                <div class="main-head">
+
+                                    <a href="smml.html"><img src="assets/images/icons/back_icon.svg"
+                                                             class="mr-2 back-icon">Individual Info
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <div class="updates float-right text-right">
+                                    <p class="mb-0">Last Updated: <span>4/23/2020 4:13 PM</span></p>
+                                    <p class="mb-0">Last Login: <span>4/23/2020 4:13 PM</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- <div class="app-page-title">
+                            <div class="page-title-wrapper">
+                                <div class="page-title-heading">
+                                    <div class="top-left-heading">
+                                        
+                                        <div class="page-title-subheading">
+                                            Global Dashboard
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="page-title-actions">
+                                    <div class="status">
+                                        <span>Last Updated :</span>
+                                        <span class="date-time">4/23/2020 4:13PM</span>
+                                    </div>
+                                    <div class="status">
+                                        <span>Last Login :</span>
+                                        <span class="date-time">4/23/2020 4:13PM PST</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- <a href="smml.html"><img style="padding-right: 5px;" class="back-icon" src="assets/images/icons/back_icon.svg">Back to
+                            Manager Info</a> -->
+                        <div class="row" style="margin-top:5px;margin-bottom: 100px;">
+                            <div class="col-md-4 col-sm-4 col-xs-12 first_column">
+                                <!-- USER DETAIL SECTION -->
+                                <div class="user_details_main box_radius">
+                                    <div class="user_details">
+                                        <div class="user_image">
+                                            <div class="user_image_inner">
+                                                <img src="assets/images/users/user_1.jpg">
+                                            </div>
+
+                                        </div>
+                                        <div class="user_description">
+                                            <div class="row">
+                                                <div class="col-md-10 col-sm-10 col-xs-10">
+                                                    <h4 class="first_column_user_name">JD Webster (jw)</h4>
+                                                </div>
+                                                <div class="col-md-2 col-sm-2 col-xs-2 first_column_flag"
+                                                     data-toggle="modal" data-target="#removeFlag">
+
+                                                </div>
+
+                                            </div>
+                                            <div class="row first_column_para">
+                                                <p>Manage WW Services strategy and business results for Microsoft's
+                                                    Datacenter; Private/Hybrid/Public Cloud Infrastructure, Cyber Security &
+                                                    Identify consulting business.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="user_table table-responsive">
+                                        <table class="table">
+                                            <tr>
+                                                <td class="user_table_head">Standard Title</td>
+                                                <td class="user_table_desc">: Dir Business Programs</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="user_table_head">Phone</td>
+                                                <td class="user_table_desc">: +1 (425) 7047105</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="user_table_head">IC Level</td>
+                                                <td class="user_table_desc">: None</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="user_table_head">Month in Role</td>
+                                                <td class="user_table_desc">: April 8, 2006</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="user_table_head">Month in Microshoft</td>
+                                                <td class="user_table_desc">: April 2, 2006</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="user_table_head">Manager</td>
+                                                <td class="user_table_desc">: JD Webster (jw)</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="user_table_head">Service Practice Lead Time Zone</td>
+                                                <td class="user_table_desc">: US</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="user_table_head">Area/Geography</td>
+                                                <td class="user_table_desc">: US</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="user_table_head">Diverse</td>
+                                                <td class="user_table_desc">: Yes</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                                <!--  PROJECT SECTION New -->
+                                <h4 class="block-head d-inline-block">Major Projects​</h4>
+                                <a class="btn motivate_btn pull-right my-3" data-toggle="modal" data-target="#ProjectModal"
+                                   style="cursor:pointer"><img src="assets/images/plus_icon.svg"> New
+                                    Project</a>
+                                <div class="skills_section box_radius project-box nicescroll" tabindex="5000"
+                                     style="overflow: hidden; outline: none;">
+                                    <div class="skills_section_inner">
+                                        <div class="motivate_text active-project">
+                                            SAIDS
+                                            <i class="removeicon"></i>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="motivate_text">
+                                            US SPRINT O
+                                            <i class="removeicon"></i>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="motivate_text">
+                                            SDS
+                                            <i class="removeicon"></i>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="motivate_text">
+                                            MEA Cloud Consumtion Program
+                                            <i class="removeicon"></i>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <!--  PROJECT SECTION New -->
+                                <!--  PROJECT SECTION -->
+                                <div class="project_main_section box-radius d-none">
+                                    <!--------box-1--------->
+                                    <div class="project_section box_radius">
+                                        <div class="project_sr_no">
+                                            <fig>1</fig>
+                                        </div>
+                                        <div class="project_title_main">
+                                            <h5>SIADS</h5>
+                                            <small>Time: 01/2018</small>
+                                        </div>
+                                        <div class="project_achievments">
+                                            <h5>84</h5>
+                                            <small>WINS</small>
+                                        </div>
+
+                                    </div>
+
+                                    <!--------box-2--------->
+                                    <div class="project_section box_radius">
+                                        <div class="project_sr_no">
+                                            <fig>2</fig>
+                                        </div>
+                                        <div class="project_title_main">
+                                            <h5>US Sprint 0</h5>
+                                            <small>Time: 04/2018</small>
+                                        </div>
+                                        <div class="project_achievments">
+                                            <h5>84</h5>
+                                            <small>WINS</small>
+                                        </div>
+                                    </div>
+
+                                    <!--------box-3--------->
+                                    <div class="project_section box_radius">
+                                        <div class="project_sr_no">
+                                            <fig>3</fig>
+                                        </div>
+                                        <div class="project_title_main">
+                                            <h5>SIADS</h5>
+                                            <small>Time: 06/2018</small>
+                                        </div>
+                                        <div class="project_achievments">
+                                            <h5>00</h5>
+                                            <small>WINS</small>
+                                        </div>
+                                    </div>
+                                    <!-- PROJECT SECTION  button-->
+                                    <div class="project_button_section box_radius">
+                                        <a class="btn btn-lg btn_project_modal" data-toggle="modal"
+                                           data-target="#ProjectModal">
+                                            <div class="project_modal_btn">
+                                                <img src="assets/images/icons/Add_icon.svg" style="margin-bottom: 2px;">
+                                            </div>
+                                            <div class="project_modal_btn_name">
+                                                Add New Project
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <!-- End of PROJECT SECTION -->
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 second_column">
+                                <div class="row tech_section">
+                                    <h4 class="block-head">Additional Info</h4>
+                                    <div class="tech_form col-md-12 col-sm-12 col-xs-12">
+
+                                        <div class="panel-group" id="accordionGroupOpen" role="tablist"
+                                             aria-multiselectable="true">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingOne">
+                                                    <h4 class="panel-title">
+                                                        <a role="button" data-toggle="collapse"
+                                                           data-parent="#accordionGroupOpen" href="#collapseOpenOne"
+                                                           aria-expanded="true" aria-controls="collapseOpenOne">
+                                                            Foundation Data
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseOpenOne" class="panel-collapse collapse in nicescroll"
+                                                     role="tabpanel" aria-labelledby="headingOne" tabindex="5000"
+                                                     style="overflow: hidden; outline: none;">
+                                                    <div class="panel-body">
+                                                        <div class="formSection readOnly">
+                                                            <form>
+                                                                <button type="button" class="editButton"
+                                                                        data-toggle="tooltip" data-placement="top" title="Edit"
+                                                                        data-original-title="Edit"></button>
+                                                                <div class="actionButtons">
+
+                                                                    <button class="cancelButton cancelButton1"
+                                                                            type="button">Cancel</button>
+                                                                    <button class="saveButton" class="mx-2"
+                                                                            type="submit">Save</button>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                                <div class="ed_inner">
+                                                                    <label class="title">Mobility</label>
+                                                                    <label>Is the person mobile</label>
+                                                                    <select name="Mobile" class="edit_select" disabled>
+                                                                        <option value="Yes" selected>Yes</option>
+                                                                        <option value="No">No</option>
+                                                                    </select>
+                                                                    <label>Note</label>
+                                                                    <textarea name="MobileNote" disabled class="edit_textarea">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                    </textarea>
+                                                                </div>
+                                                                <div class="ed_inner">
+                                                                    <label class="title">Travel Tolerance</label>
+                                                                    <label>Tolerance to travel</label>
+                                                                    <select name="Tolerance" class="edit_select" disabled>
+                                                                        <option value="High" selected>High</option>
+                                                                        <option value="Low">Low</option>
+                                                                    </select>
+                                                                    <label>Note</label>
+                                                                    <textarea name="TolerenceNote" disabled
+                                                                              class="edit_textarea">
+                                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                    </textarea>
+                                                                </div>
+                                                                <div class="ed_inner">
+                                                                    <label class="title">Rotation</label>
+                                                                    <label>Interest for rotation</label>
+                                                                    <select name="Interest" class="edit_select" disabled>
+                                                                        <option value="Yes" selected>Yes</option>
+                                                                        <option value="No">No</option>
+                                                                    </select>
+                                                                    <label>Note</label>
+                                                                    <textarea name="InterestNote" disabled
+                                                                              class="edit_textarea">
+                                                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                    </textarea>
+                                                                </div>
+                                                                <div class="ed_inner">
+                                                                    <label class="title">Current State</label>
+                                                                    <div class="edit_radio">
+                                                                        <div class="radio-inline p_left_zero">
+                                                                            <input type="radio" name="radioBtn" id="radioBtn1"
+                                                                                   checked disabled>
+                                                                            <label for="radioBtn1" class="mg_label_text ">
+                                                                                <span class="custom_radio_label">Intent to
+                                                                                    stay</span>
+                                                                            </label>
+                                                                        </div>
+                                                                        <div class="radio-inline">
+                                                                            <input type="radio" name="radioBtn" id="radioBtn2"
+                                                                                   disabled>
+                                                                            <label for="radioBtn2" class="mg_label_text">
+                                                                                <span class="custom_radio_label">Ready to
+                                                                                    move</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <label>Current State</label>
+                                                                    <select name="State" class="edit_select" disabled>
+                                                                        <option value="Highest" selected>Highest</option>
+                                                                        <option value="High">High</option>
+                                                                        <option value="Medium">Medium</option>
+                                                                        <option value="Low">Low</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="ed_inner" style="border-bottom: 10px solid #ffffff;">
+                                                                    <label class="title">Award and recognition</label>
+                                                                    <label>Previous Awards</label>
+                                                                    <div id="tags">
+                                                                        <div class="edit_remove_input">
+                                                                            <input type="text" value="Award1" class="tag_input"
+                                                                                   disabled>
+                                                                            <i class="edit_tag"></i>
+                                                                        </div>
+                                                                        <div class="edit_remove_input">
+                                                                            <input type="text" value="Award2" class="tag_input"
+                                                                                   disabled>
+                                                                            <i class="edit_tag"></i>
+                                                                        </div>
+                                                                        <div class="edit_remove_input">
+                                                                            <input type="text" value="Award3" class="tag_input"
+                                                                                   disabled>
+                                                                            <i class="edit_tag"></i>
+                                                                        </div>
+                                                                        <div class="edit_remove_input">
+                                                                            <input type="text" value="Award4" class="tag_input"
+                                                                                   disabled>
+                                                                            <i class="edit_tag"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                
+                                                                <label>Aspiring to Awards</label>
+                                                            <!-----    <div id="tags">
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Award1" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Award2" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Award3" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Award4" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                </div>----->
+
+                                                                <label>Additional manager notes</label>
+                                                                <textarea name="AdditionalManagerNote" disabled class="edit_textarea">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingTwo">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                           data-parent="#accordionGroupOpen" href="#collapseOpenTwo"
+                                                           aria-expanded="false" aria-controls="collapseTwo">
+                                                            Current Skill Mapping
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseOpenTwo" class="panel-collapse collapse  nicescroll"
+                                                     role="tabpanel" aria-labelledby="headingTwo" tabindex="5000"
+                                                     style="overflow: hidden; outline: none;">
+                                                    <div class="panel-body">
+                                                        <div class="formSection readOnly">
+
+                                                            <form>
+                                                                <button type="button" class="editButton"
+                                                                        data-toggle="tooltip" data-placement="top" title="Edit"
+                                                                        data-original-title="Edit"></button>
+
+                                                                <div class="actionButtons">
+                                                                    <!-- <a href="#" class="cancelButton1">Cancel</a> -->
+                                                                    <button class="cancelButton cancelButton1"
+                                                                            id="cancelButton2" type="button">Cancel</button>
+                                                                    <button class="saveButton" class="mx-2"
+                                                                            type="submit">Save</button>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                                <label>Primary Technology Area</label>
+                                                                <select name="TechnologyArea" class="edit_select" disabled>
+                                                                    <option value="Microsoft Secure" selected>Microsoft
+                                                                        Secure</option>
+                                                                    <option value="Microsoft Secure 2">Microsoft Secure 2
+                                                                    </option>
+                                                                </select>
+                                                                <hr>
+                                                                <label>MS Certifications</label>
+                                                                <select name="Certification" class="edit_select_2" disabled>
+                                                                    <option value="" selected>Select Certificate</option>
+                                                                    <option value="Microsoft Certificate">Microsoft
+                                                                        Certificate</option>
+                                                                    <option value="Microsoft Certificate 2">Microsoft
+                                                                        Certificate 2</option>
+                                                                </select>
+                                                                <label>3<sup>rd</sup> Party Certifications</label>
+                                                                <select name="Certification" class="edit_select_2" disabled>
+                                                                    <option value="" selected>Select Certificate</option>
+                                                                    <option value="Microsoft Certificate">Microsoft
+                                                                        Certificate</option>
+                                                                    <option value="Microsoft Certificate 2">Microsoft
+                                                                        Certificate 2</option>
+                                                                </select>
+                                                                <label>Industry Certifications</label>
+                                                                <select name="Certification" class="edit_select_2" disabled>
+                                                                    <option value="" selected>Select Certificate</option>
+                                                                    <option value="Microsoft Certificate">Microsoft
+                                                                        Certificate</option>
+                                                                    <option value="Microsoft Certificate 2">Microsoft
+                                                                        Certificate 2</option>
+                                                                </select>
+                                                                <hr>
+                                                                <label>Unique Tech Skills of SI</label>
+                                                                <div id="tags">
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 1" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 2" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 3" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 4" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <label>Non-Technical Skills</label>
+                                                                <div id="tags">
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 1" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 2" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 3" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 4" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="headingThree">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                           data-parent="#accordionGroupOpen" href="#collapseOpenThree"
+                                                           aria-expanded="false" aria-controls="collapseThree">
+                                                            Development
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseOpenThree" class="panel-collapse collapse  nicescroll"
+                                                     role="tabpanel" aria-labelledby="headingThree" tabindex="5000"
+                                                     style="overflow: hidden; outline: none;">
+                                                    <div class="panel-body">
+                                                        <div class="formSection readOnly">
+                                                            <form>
+                                                                <button type="button" class="editButton"
+                                                                        data-toggle="tooltip" data-placement="top" title="Edit"
+                                                                        data-original-title="Edit"></button>
+                                                                <div class="actionButtons">
+                                                                    <!-- <a href="#" class="cancelButton1">Cancel</a> -->
+                                                                    <button class="cancelButton cancelButton1"
+                                                                            id="cancelButton3" type="button">Cancel</button>
+                                                                    <button class="saveButton" class="mx-2"
+                                                                            type="submit">Save</button>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                                <label>Common Internal Motivators</label>
+                                                                <div id="tags">
+                                                                    <i class="edit_search_tag"></i>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Breakfast with Leadership"
+                                                                               class="tag_input" disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Award and Recognition"
+                                                                               class="tag_input" disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                </div>
+
+                                                                <label>Common External Motivatiors</label>
+                                                                <div id="tags">
+                                                                    <i class="edit_search_tag"></i>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text"
+                                                                               value="Speaking Sessiopn in Webinar 1"
+                                                                               class="tag_input" disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                </div>
+
+                                                                <label>Note</label>
+                                                                <textarea name="CommonNote" disabled class="edit_textarea">
+Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <hr>
+                                                                <label>Top soft skills to assign for development</label>
+                                                                <div id="tags">
+                                                                    <i class="edit_search_tag"></i>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 1" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 2" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                    <div class="edit_remove_input">
+                                                                        <input type="text" value="Skill 3" class="tag_input"
+                                                                               disabled>
+                                                                        <i class="edit_tag"></i>
+                                                                    </div>
+                                                                </div>
+                                                                <label>Note</label>
+                                                                <textarea name="SoftSkillsdNote" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <hr>
+                                                                <label>Development Plan 3 Months</label>
+                                                                <textarea name="Development_Plan_3_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <label>Development Plan 6 Months</label>
+                                                                <textarea name="Development_Plan_6_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <label>Development Plan 9 Months</label>
+                                                                <textarea name="Development_Plan_9_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <label>Key Action to prioritise</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <label>Lession learned last Q</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <label>Lession learned next Q</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <hr>
+                                                                <div class="edit_radio">
+                                                                    <label class="rotation_label" style="width:60%;">Talent
+                                                                        is on rotation</label>
+                                                                    <div class="radio-inline p_left_zero"
+                                                                         style="width:20%;">
+                                                                        <input type="radio" name="rotation_radioBtn"
+                                                                               id="radioBtn1" checked disabled>
+                                                                        <label for="radioBtn1" class="mg_label_text ">
+                                                                            <span class="custom_radio_label">Yes</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline" style="width:20%;">
+                                                                        <input type="radio" name="rotation_radioBtn"
+                                                                               id="radioBtn2" disabled>
+                                                                        <label for="radioBtn2" class="mg_label_text">
+                                                                            <span class="custom_radio_label">No</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <label>Notes for Rotation Detail</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+
+                                                                <div class="edit_radio">
+                                                                    <label class="rotation_label" style="width:60%;">Talent
+                                                                        needs rotation</label>
+                                                                    <div class="radio-inline p_left_zero"
+                                                                         style="width:20%;">
+                                                                        <input type="radio" name="needs_radioBtn"
+                                                                               id="radioBtn1" disabled>
+                                                                        <label for="radioBtn1" class="mg_label_text ">
+                                                                            <span class="custom_radio_label">Yes</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline" style="width:20%;">
+                                                                        <input type="radio" name="needs_radioBtn"
+                                                                               id="radioBtn2" checked disabled>
+                                                                        <label for="radioBtn2" class="mg_label_text">
+                                                                            <span class="custom_radio_label">No</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <label>Notes for Rotation Plan</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <label>Talent is on which success Plan</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <label>Who is on the succession plan for the talent</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                                                                </textarea>
+                                                                <hr>
+                                                                <div class="edit_radio">
+                                                                    <label class="rotation_label" style="width:60%;">Past
+                                                                        Program Attendance</label>
+                                                                    <div class="radio-inline p_left_zero"
+                                                                         style="width:20%;">
+                                                                        <input type="radio" name="Past_radioBtn"
+                                                                               id="radioBtn1" disabled>
+                                                                        <label for="radioBtn1" class="mg_label_text ">
+                                                                            <span class="custom_radio_label">Yes</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline" style="width:20%;">
+                                                                        <input type="radio" name="Past_radioBtn"
+                                                                               id="radioBtn2" checked disabled>
+                                                                        <label for="radioBtn2" class="mg_label_text">
+                                                                            <span class="custom_radio_label">No</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="edit_radio">
+                                                                    <label class="rotation_label" style="width:60%;">Current
+                                                                        Program Attendance</label>
+                                                                    <div class="radio-inline p_left_zero"
+                                                                         style="width:20%;">
+                                                                        <input type="radio" name="Current_radioBtn"
+                                                                               id="radioBtn1" disabled>
+                                                                        <label for="radioBtn1" class="mg_label_text ">
+                                                                            <span class="custom_radio_label">Yes</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline" style="width:20%;">
+                                                                        <input type="radio" name="Current_radioBtn"
+                                                                               id="radioBtn2" checked disabled>
+                                                                        <label for="radioBtn2" class="mg_label_text">
+                                                                            <span class="custom_radio_label">No</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="edit_radio">
+                                                                    <label class="rotation_label"
+                                                                           style="width:60%;">Consider Future
+                                                                        Attendance</label>
+                                                                    <div class="radio-inline p_left_zero"
+                                                                         style="width:20%;">
+                                                                        <input type="radio" name="Future_radioBtn"
+                                                                               id="radioBtn1" disabled>
+                                                                        <label for="radioBtn1" class="mg_label_text ">
+                                                                            <span class="custom_radio_label">Yes</span>
+                                                                        </label>
+                                                                    </div>
+                                                                    <div class="radio-inline" style="width:20%;">
+                                                                        <input type="radio" name="Future_radioBtn"
+                                                                               id="radioBtn2" checked disabled>
+                                                                        <label for="radioBtn2" class="mg_label_text">
+                                                                            <span class="custom_radio_label">No</span>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <hr>
+                                                                <div class="row edit_radio">
+                                                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                                                        <label class="rotation_label" style="">Training
+                                                                            Opportunities</label>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="radio-inline p_left_zero"
+                                                                             style="width: 100%;">
+                                                                            <input type="radio" name="Training_radioBtn"
+                                                                                   id="radioBtn1" checked disabled>
+                                                                            <label for="radioBtn1" class="mg_label_text ">
+                                                                                <span
+                                                                                    class="custom_radio_label">Bootcamps</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="radio-inline" style="width: 100%;">
+                                                                            <input type="radio" name="Training_radioBtn"
+                                                                                   id="radioBtn2" disabled>
+                                                                            <label for="radioBtn2" class="mg_label_text">
+                                                                                <span class="custom_radio_label">External
+                                                                                    Training</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="radio-inline" style="width: 100%;">
+                                                                            <input type="radio" name="Training_radioBtn"
+                                                                                   id="radioBtn2" disabled>
+                                                                            <label for="radioBtn2" class="mg_label_text">
+                                                                                <span class="custom_radio_label">Internal
+                                                                                    Training</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="radio-inline" style="width: 100%;">
+                                                                            <input type="radio" name="Training_radioBtn"
+                                                                                   id="radioBtn2" disabled>
+                                                                            <label for="radioBtn2" class="mg_label_text">
+                                                                                <span
+                                                                                    class="custom_radio_label">Certification</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                                        <div class="radio-inline" style="width: 100%;">
+                                                                            <input type="radio" name="Training_radioBtn"
+                                                                                   id="radioBtn2" disabled>
+                                                                            <label for="radioBtn2" class="mg_label_text">
+                                                                                <span class="custom_radio_label">Soft Skills
+                                                                                    Courses</span>
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading" role="tab" id="heading_4">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" role="button" data-toggle="collapse"
+                                                           data-parent="#accordionGroupOpen" href="#collapseOpen_4"
+                                                           aria-expanded="false" aria-controls="collapse_4">
+                                                            Activities
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseOpen_4" class="panel-collapse collapse nicescroll"
+                                                     role="tabpanel" aria-labelledby="heading_4" tabindex="5000"
+                                                     style="overflow: hidden; outline: none;">
+                                                    <div class="panel-body">
+                                                        <div class="formSection readOnly">
+                                                            <form>
+                                                                <button type="button" class="editButton"
+                                                                        data-toggle="tooltip" data-placement="top" title="Edit"
+                                                                        data-original-title="Edit"></button>
+                                                                <div class="actionButtons">
+                                                                    <!-- <a href="#" class="cancelButton1">Cancel</a> -->
+                                                                    <button class="cancelButton1" id="cancelButton4"
+                                                                            type="button">Cancel</button>
+                                                                    <button class="saveButton" class="mx-2"
+                                                                            type="submit">Save</button>
+                                                                </div>
+                                                                <div class="clearfix"></div>
+                                                                <label>Activity Planned</label>
+                                                                <select name="PlannedActivity" class="edit_select" disabled>
+                                                                    <option value="Meeting" selected>Meeting</option>
+                                                                    <option value="Meeting 2">Meeting 2</option>
+                                                                </select>
+                                                                <label>Activity Details</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Planned for breakfast with leadership on saturday morning on 29-June-2020
+                                                                </textarea>
+                                                                <hr>
+                                                                <label>Activities Completed</label>
+                                                                <select name="ActivitiesCompleted" class="edit_select"
+                                                                        disabled>
+                                                                    <option value="Meeting" selected>Meeting</option>
+                                                                    <option value="Meeting 2">Meeting 2</option>
+                                                                </select>
+                                                                <hr>
+                                                                <label>Complete Details</label>
+                                                                <textarea name="prioritise_Note" disabled
+                                                                          class="edit_textarea">
+                                                                    Monday morning on 29-june-2020 meeting completed
+                                                                </textarea>
+                                                                <hr>
+                                                                <label>Current State / Risk Field</label>
+                                                                <select name="Certification" class="edit_select_2" disabled>
+                                                                    <option value="" selected>Select Risk</option>
+                                                                    <option value="Option 1">Option 1</option>
+                                                                    <option value="Option 2">Option 2</option>
+                                                                </select>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <style>
+                                            .panel,
+                                            .panel-body {
+                                                box-shadow: none;
+                                            }
+
+                                            .panel-collapse {
+                                                height: 610px;
+                                                overflow-x: hidden;
+                                                width: 100%;
+                                            }
+
+                                            .panel-title {
+                                                margin-bottom: 0px !important;
+                                                text-transform: none;
+                                                color: rgb(67, 116, 255) !important;
+                                                font-weight: 500;
+                                                font-size: 13px;
+                                                margin-bottom: 0px;
+                                            }
+
+                                            .panel-group .panel-heading {
+                                                padding: 0;
+                                            }
+
+                                            .panel-group .panel-heading a {
+                                                display: block;
+                                                padding: 15px 15px;
+                                                text-decoration: none;
+                                                position: relative;
+                                            }
+
+                                            .panel-group .panel-heading a:after {
+                                                content: '';
+                                                float: right;
+                                                background-image: url(assets/images/icons/minus_icon.svg);
+                                                background-repeat: no-repeat;
+                                                background-size: 27px;
+                                                position: relative;
+                                                right: 0px;
+                                                background-position: right;
+                                                padding: 15px;
+                                                float: right;
+                                                bottom: 7px;
+                                                cursor: pointer !important;
+                                            }
+
+                                            .panel-group .panel-heading a.collapsed:after {
+                                                content: '';
+                                                background-image: url(assets/images/icons/Add_icon.svg);
+                                                background-repeat: no-repeat;
+                                                background-size: 27px;
+                                                position: relative;
+                                                right: 0px;
+                                                background-position: right;
+                                                padding: 15px;
+                                                float: right;
+                                                bottom: 7px;
+                                                cursor: pointer !important;
+                                            }
+
+                                            .panel-default>.panel-heading {
+                                                color: #333;
+                                                background-color: #eef9ff;
+                                                border-color: #9c9c9c;
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 third_column">
+                                <div class="project_button_section box_radius meeting_section">
+                                    <a class="btn btn-lg btn_project_modal">
+                                        <div class="meeting_title">
+                                            One-to-one Meeting in last Month
+                                        </div>
+                                        <div class="project_modal_btn">
+                                            <fig class="meeting_count">7</fig>
+                                        </div>
+                                    </a>
+                                    <div class="meeting-details d-flex justify-content-between">
+                                        <div class="meeting-details-item font-weight-bold">Last Meeting </div>
+                                        <div class="meeting-details-item text-center">21/04/2020 </div>
+                                        <div class="meeting-details-item text-right border-0">4:13PM PST </div>
+                                    </div>
+                                </div>
+                                <!------------Skills Secrion-------------->
+                                <h4 class="block-head">Tags</h4>
+                                <div class="skills_section box_radius skill_box nicescroll" tabindex="5000"
+                                     style="overflow: hidden; outline: none;">
+                                    <div class="skills_section_inner">
+                                        <a data-toggle="modal" data-target="#SkillsModal" style="cursor: pointer;"><img
+                                                src="assets/images/icons/Add_icon.svg" class="skills_add_icon"></a>
+
+                                        <div class="skills_text skills_text_active position-relative">
+                                            Motivators <img class="remove-skill position-absolute"
+                                                            src="assets/images/cross_delete_white_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Skill <img class="remove-skill position-absolute"
+                                                       src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Deliverables <img class="remove-skill position-absolute"
+                                                              src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Past Investment <img class="remove-skill position-absolute"
+                                                                 src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Planed Investment <img class="remove-skill position-absolute"
+                                                                   src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Area of Interest <img class="remove-skill position-absolute"
+                                                                  src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Flag Escalations <img class="remove-skill position-absolute"
+                                                                  src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Succession Planning <img class="remove-skill position-absolute"
+                                                                     src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Reminders <img class="remove-skill position-absolute"
+                                                           src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Training <img class="remove-skill position-absolute"
+                                                          src="assets/images/cross_icon.svg">
+                                        </div>
+                                        <div class="skills_text position-relative">
+                                            Quick Facts <img class="remove-skill position-absolute"
+                                                             src="assets/images/cross_icon.svg">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <!------------Add motivation-------------->
+                                <div class="motivation_section box_radius nicescroll"
+                                     style="overflow-x: hidden;overflow-y: auto;" tabindex="5000"
+                                     style="overflow: hidden; outline: none;">
+                                    <div class="motivation_section_inner">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12 motivate_title">
+                                                <h4>Motivators</h4>
+                                            </div>
+                                            <div class="col-8 col-sm-8 col-xs-12">
+                                                <a class="btn motivate_btn pull-right" data-toggle="modal"
+                                                   data-target="#MotivationModal" style="cursor:pointer"> <img
+                                                        src="assets/images/plus_icon.svg"> New
+                                                    Motivation</a>
+                                            </div>
+                                            <div class="row" style="margin: 10px;">
+                                                <div class="motivate_text">
+                                                    Breakfast with Leadership
+                                                    <i class="removeicon"></i>
+                                                </div>
+
+                                                <div class="motivate_text">
+                                                    Innovation on ACR Programs
+                                                    <i class="removeicon"></i>
+                                                </div>
+
+                                                <div class="motivate_text">
+                                                    Speaking secssion in Webinars
+                                                    <i class="removeicon"></i>
+                                                </div>
+
+                                                <div class="motivate_text">
+                                                    Award &amp; Recognition
+                                                    <i class="removeicon"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div id="ProjectModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Add New Project</h5>
+                        <button type="button" class="close" data-dismiss="modal"><img
+                                src="assets/images/cross_icon.svg"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="project_form" id="project_form">
+                            <div class="form-group">
+                                <label for="Title" class="modal_label">Name of the Project</label>
+                                <input type="text" class="form-control modal_input" id="Title" name="Title">
+                            </div>
+                            <!-----  <div class="form-group">
+                                    <label for="Title" class="modal_label">Start Date</label>
+                                    <input type="text" class="form-control modal_input" id="Title" name="Title">
+                                    <i  class="calendar_active"></i>
+                                </div>---->
+                            <!-- <label>Start Date </label>
+                            <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+                                <input class="form-control" type="text" readonly style="background:#fff;margin-top: 0px;" />
+                                <span class="input-group-addon">
+                                </span>
+                            </div> -->
+                            <script type="text/javascript">
+                                        $(function () {
+                                        $("#datepicker").datepicker({
+                                        autoclose: true,
+                                                todayHighlight: true
+                                        }).datepicker('update', new Date());
+                                        });                        </script>
+                            <link
+                                href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+                                rel="stylesheet" type="text/css" />
+
+                            <script
+                            src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+
+
+                            <!-- <div class="form-group">
+                                <label for="Title" class="modal_label">Wins Count</label>
+                                <input type="text" class="form-control modal_input" id="Title" name="Title">
+                            </div> -->
+                            <button type="submit" class="btn btn-primary float-right" data-dismiss="modal">Save</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!----------End of moadl------->
+
+
+        <!-- Modal -->
+        <div id="SkillsModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Add New Tag</h5>
+                        <button type="button" class="close" data-dismiss="modal"><img
+                                src="assets/images/cross_icon.svg"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="project_form" id="project_form">
+                            <div class="form-group">
+                                <label for="Title" class="modal_label">Name of Tag</label>
+                                <input type="text" class="form-control modal_input" id="Title" name="Title">
+                            </div>
+                            <button type="submit" class="btn btn-primary float-right m-0" data-dismiss="modal">Save</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!----------End of moadl------->
+
+        <!-- Modal -->
+        <div id="MotivationModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-sm">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Add New Motivation</h5>
+                        <button type="button" class="close" data-dismiss="modal"><img
+                                src="assets/images/cross_icon.svg"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="project_form" id="project_form">
+                            <div class="form-group">
+                                <label for="Title" class="modal_label">Add Details</label>
+                                <textarea class="form-control modal_textarea" id="Title" name="Title"></textarea>
+                                <!----<input type="text" class="form-control modal_input" id="Title" name="Title">---->
+                            </div>
+                            <button type="submit" class="btn btn-primary float-right m-0" data-dismiss="modal">Save</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!----------End of moadl------->
+        <div class="modal flag-popup" id="removeFlag">
+            <div class="modal-dialog">
+                <div class="modal-content" style="box-shadow:none;">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+
+                        <button type="button" class="close" data-dismiss="modal"><img
+                                src="assets/images/cross_icon.svg"></button>
+
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <div class="widget-content text-center p-0">
+
+                            <img width="42" class="rounded-circle" src="assets/images/avatars/9.jpg" alt="">
+
+
+                            <div class="widget-heading">Francis Tranc (ft)</div>
+                            <div class="widget-subheading">Storage Team Manager</div>
+
+                        </div>
+
+                        <p class="text-danger text-center">Are you sure want to remove flag?</p>
+                    </div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer text-center">
+                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Remove</button>
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <script>
+                                        $(function () {
+                                        $('[data-toggle="tooltip"]').tooltip()
+                                        })
+                                        function resizeInput() {
+                                        $(this).attr('size', $(this).val().length);
+                                        }
+
+                                $('input[type="text"]')
+                                        // event handler
+                                        .keyup(resizeInput)
+                                        // resize on page load
+                                        .each(resizeInput);    </script>
+
+    </form>
+
+    <script>
+                var oldValues = null;
+                $(document)
+                .on("click", ".editButton", function () {
+
+                var section = $(this).closest(".formSection");
+                        var otherSections = $(".formSection").not(section);
+                        var inputs = section.find("input");
+                        var select = section.find("select");
+                        var textarea = section.find("textarea");
+                        var radio = section.find("radio");
+                        section
+                        .removeClass("readOnly");
+                        otherSections
+                        .addClass("disabled")
+                        .find('button').prop("disabled", true);
+                        oldValues = {};
+                        inputs
+                        .each(function () {
+                        oldValues[this.id] = $(this).val();
+                        })
+                        .prop("disabled", false);
+                        select
+                        .each(function () {
+                        oldValues[this.id] = $(this).val();
+                        })
+                        .prop("disabled", false);
+                        textarea
+                        .each(function () {
+                        oldValues[this.id] = $(this).val();
+                        })
+                        .prop("disabled", false);
+                        radio
+                        .each(function () {
+                        oldValues[this.id] = $(this).val();
+                        })
+                        .prop("disabled", false);
+                })
+
+                .on("click", ".cancelButton", function (e) {
+
+                var section = $(this).closest(".formSection");
+                        var otherSections = $(".formSection").not(section);
+                        var inputs = section.find("input");
+                        var select = section.find("select");
+                        var textarea = section.find("textarea");
+                        var radio = section.find("radio");
+                        section
+                        .addClass("readOnly");
+                        otherSections
+                        .removeClass("disabled");
+                        $('button').prop("disabled", false);
+                        inputs
+                        .each(function () {
+                        $(this).val(oldValues[this.id]);
+                        })
+                        .prop("disabled", true)
+                        select
+                        .each(function () {
+                        $(this).val(oldValues[this.id]);
+                        })
+                        .prop("disabled", true)
+                        textarea
+                        .each(function () {
+                        $(this).val(oldValues[this.id]);
+                        })
+                        .prop("disabled", true)
+                        radio
+                        .each(function () {
+                        $(this).val(oldValues[this.id]);
+                        })
+                        .prop("disabled", true)
+
+                        e.stopPropagation();
+                        e.preventDefault();
+                });
+                const refreshButton = document.querySelector('.cancelButton');
+                const refreshPage = () = > {
+        location.reload();
+        }
+
+        refreshButton.addEventListener('click', refreshPage)
+    </script>
+    <script>
+                $('#cancelButton2').click(function () {
+        location.reload();
+        });
+                $('#cancelButton3').click(function () {
+        location.reload();
+        });
+                $('#cancelButton4').click(function () {
+        location.reload();
+        });    </script>
+    <script>
+                window.onload = function () {
+                if (/MSIE \d|Trident.*rv:/.test(navigator.userAgent))
+                {
+                windowHeight = screen.height + 100;
+                        document.getElementById("individualBody").setAttribute('style', "height:" + windowHeight + 'px' + ";");
+                }
+
+                }
+
+    </script>
+    <script src="https://areaaperta.com/nicescroll/js/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript">
+                   $(document).ready(function () {
+           $(".nicescroll").niceScroll({ autohidemode: true })
+           });
+    </script>
+</body>
+
+</html>

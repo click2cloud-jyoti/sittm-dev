@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description" content="Wide selection of cards with multiple styles, borders, actions and hover effects.">
+    <meta name="msapplication-tap-highlight" content="no">
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <style type="text/css">
+        .banner {
+            padding-top: 5px;
+            color: #fff
+        }
+        
+        ul {
+            margin: 0;
+            padding: 0 20px;
+        }
+        
+        ul li {
+            margin-bottom: 10px
+        }
+        
+        a:hover {
+            text-decoration: none;
+        }
+        
+        h1 {
+            margin-bottom: 40px
+        }
+        
+        h3 {
+            font-size: 22px;
+            margin-bottom: 20px
+        }
+        
+        .listing {
+            padding-top: 30px
+        }
+        
+        .introduction {
+            padding-bottom: 60px
+        }
+        
+        .introduction p {
+            margin-bottom: 30px
+        }
+        
+        .banner a {
+            background: #fb4f77f7;
+            color: #fff;
+            padding: 12px 50px;
+            font-size: 15px;
+            border-radius: 2px
+        }
+        
+        #hero-banner {
+            background: url('images/talent_icons/globalView.jpg');
+            height: 100vh;
+            margin-bottom: 0px;
+            background-size: cover;
+            background-position: center;
+            background-repeat:no-repeat ;
+        }
+        
+        h1 {
+            font-size: 38px
+        }
+        
+        .modal-header,
+        .modal-footer {
+            background: #fff!important;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: 0 !important;
+           
+        }
+        
+ 
+        label {
+            font-size: 13px
+        }
+        
+        h4 {
+            font-size: 15px;
+            color: #4f7cfb
+        }
+        
+        .form-control {
+            font-size: 12px!important;
+            height: 34px!important;
+        }
+        
+        .form-group {
+            margin-bottom:10px;
+        }
+        
+        .modal-body {
+            padding: 10px 30px
+        }
+        
+        .modal-footer .btn {
+            padding: 4px 30px
+        }
+        
+        .input-group-text {
+            background: #fff
+        }
+        
+        .aestric {
+            color: #ff0000;
+        }
+        .modal
+        {
+            padding-right:0px !important;
+        }
+        .modal_dialog{
+            margin: 5% auto 2% 8.8%;
+        }
+        .banner-form
+        {
+            background: #fff;
+    padding: 10px 25px;
+    border-radius: 0.25rem;
+        }
+        .form-group label {
+            color: #495057;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body id="nominateTalentBody">
+    <section id="hero-banner">
+        <div class="container">
+            <div class="banner">
+                 <div class="banner-form col-md-5">
+                    <div class="banner-form-body">
+                        <div class="col-md-12 pl-0 mb-3"><h4 class="modal-title">Nominate a Talent</h4></div>
+                        <form name="myForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="uname">Alias<b class="aestric">*</b> </label>
+                                        <input type="text" class="form-control" id="unamefield"
+                                            placeholder="Enter username" name="uname" ng-change="updateErrorMsg('')"  autocomplete="off" ng-model="talentForm.alias" required>
+                                        <span style="color:Red" id="aliasMsg"></span>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sel4">Manager<b class="aestric">*</b></label>
+                                        <select class="form-control" id="managerfield"
+                                            ng-model="talentForm.manager" required>
+                                            <option value="" selected disabled>Select Manager</option>
+                                            <option ng-repeat="manager in managerLists" value="{{manager.email}}">
+                                                {{manager.full_name}} ({{manager.email}})</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sel2">Travel Tolerance</label>
+                                        <select class="form-control" id="sel2" ng-model="talentForm.travel_tolerance">
+                                            <option value="" disabled selected>Select tolerance</option>
+                                            <option>High</option>
+                                            <option>Medium</option>
+                                            <option>Low</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sel4">Project</label>
+                                        <input type="text" class="form-control" id="projectfield"
+                                            placeholder="Enter projects" name="project" ng-model="talentForm.project">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sel1">Mobility</label>
+                                        <select class="form-control" id="sel1" ng-model="talentForm.mobility">
+                                            <option value="" disabled selected>Select mobility</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="sel4">Trainings</label>
+                                        <select class="form-control" id="sel4" ng-model="talentForm.training">
+                                            <option value="" disabled selected>Select training</option>
+                                            <option ng-repeat="val in certificateList" value="{{val.certificate}}">
+                                                {{val.certificate}}</option>
+                                        </select>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+
+
+                                        <label for="sel4">Area of Interest </label>
+                                        <input type="text" class="form-control" id="interestfield"
+                                            placeholder="Enter interests" name="interest" ng-model="talentForm.area_of_interest">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+
+
+                                        <label for="sel4">Quick Facts</label>
+                                        <input type="text" class="form-control" id="factsfield"
+                                            placeholder="Enter facts" name="facts" ng-model="talentForm.quick_facts">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+
+
+                                        <label for="sel4">Deliverables</label>
+                                        <input type="text" class="form-control" id="deliverfield"
+                                            placeholder="Enter deliverables" name="deliver"
+                                            ng-model="talentForm.delivberables">
+
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer justify-content-end">
+                        <button type="submit" class="btn btn-primary"
+                            ng-disabled="myForm.$invalid"
+                            ng-click="submitTalent('save',talentForm)">Submit</button>
+                        <button type="submit" class="btn btn-secondary" data-dismiss="modal" ng-click="TalentVar();updateErrorMsg('')">Cancel</button>
+                    </div>
+                    </form>
+                    </div>
+                 </div>
+            </div>
+            <!-- Modal -->
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog modal_dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Nominate a Talent</h4>
+                            <button type="button" class="close" data-dismiss="modal"><img src="images/cross_icon.svg"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form action="/action_page.php">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="uname">Alias<b class="aestric">*</b> </label>
+                                            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel1">Mobility</label>
+                                            <select class="form-control" id="sel1">
+                                                <option>Yes</option>
+                                                <option>No</option>                                                
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel2">Travel Tolerance</label>
+                                            <select class="form-control" id="sel2">
+                                                <option>High</option>
+                                                <option>Medium</option>
+                                                <option>Low</option>										    
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel4">Project</label>
+                                            <input type="text" class="form-control" id="project" placeholder="" name="project">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="">Motivational Factor</label>
+                                            <div class="input-group ">
+                                                <input type="text" class="form-control border-right-0" placeholder="">
+                                                <div class="input-group-append">
+                                                    <span class="input-group-text"><img src="images/search_icon.svg"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="sel4">Trainings</label>
+                                            <select class="form-control" id="sel4">
+										    <option>Azure Bootcamps</option>
+										    <option>Microsoft Secure Bootcamps</option>
+                                            <option>Modern IT Bootcamps</option>
+                                            <option>Soft Skills Courses, MIT</option>
+										    <option>Soft Skills Courses, HBS</option>
+                                            <option>AZ-300</option>
+                                            <option>AZ-301</option>
+										    <option>AZ-103</option>
+                                            <option>AZ-104</option>
+                                            <option>MS-100</option>
+										    <option>MS-101</option>
+                                            <option>MS-500</option>
+                                            <option>AZ-400</option>
+										    <option>AZ-203</option>
+                                            <option>AZ-500</option>
+                                            <option>AZ-900</option>
+										    <option>PMP: Project Management</option>
+                                            <option>CAPM: Certified Associate in Project Managemtn</option>
+                                            <option>CSM: Certificed SCRUM Master</option>
+										    <option>CISSP: Certified Information Systems Security Professional </option>
+                                            <option>LFCS: Linux Foundation Certified System Administrator</option>
+                                            <option>CITA-F: Certified IT Architect Foundation</option>
+										    <option>CITA-A: Certified IT Architect Associate</option>
+										    <option>SAFe: Safe SCRUM Master </option>										    
+										</select>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+
+
+                                            <label for="sel4">Area of Inteest </label>
+                                            <input type="text" class="form-control" id="interest" placeholder="" name="interest">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+
+
+                                            <label for="sel4">Quick Facts</label>
+                                            <input type="text" class="form-control" id="facts" placeholder="" name="facts">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+
+
+                                            <label for="sel4">Deliverables</label>
+                                            <input type="text" class="form-control" id="deliver" placeholder="" name="deliver">
+
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer justify-content-end">
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+        </div>
+    </section>
+    <!-- <div class="page-container">
+        <div class="introduction">
+            <p>Welcome to <b>Secure Infrastructure Technical Talent Management (SITTM)</b>, the platform which showcase the top talents by addressing their needs, providing mechanism for management a secure way to present resource capabilities, motivating
+                factors across different teams of Secure Infrastructure domain. Talent/Skill retention programs can help you protect your most valuable assets: your employee. </p>
+
+            <p>The main Purpose to provide such kind of platform where managers can align & retain the key tech resources for Microsoft Services advantage over competitors.</p>
+            <div class="listing">
+
+                <h3>Why SITTM?</h3>
+                <ul>
+                    <li>To retain talent for Microsoft Services SI Domain for advantage over competitors.</li>
+                    <li>More Visibility to resource pool based on talent experiences and their skill sets.</li>
+                    <li>Having a regular touch point for Microsoft Services SI Domain resources globally.</li>
+                    <li>Manage Motivating factor and Flag Escalations in timely manner for Microsoft Services SI Domain talent.</li>
+                    <li>Define Development plan for the talented team and shared information with top management</li>
+                </ul>
+            </div>
+
+        </div>
+    </div> -->
+
+    <script type="text/javascript" src="javascripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $("#nominateTalentBody").click(function () {
+            var x = parent.document.getElementById("userProfileMenu");
+            x.classList.remove("show");
+            var y = parent.document.getElementById("otherMenu");
+            y.classList.remove("show");
+            var z = parent.document.getElementById("notificationDropdown");
+            z.classList.remove("show");
+        }); 
+    </script>
+</body>

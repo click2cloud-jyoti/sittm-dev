@@ -1,0 +1,823 @@
+.box_radius {
+    border-radius: 5px;
+}
+
+.user_details_main {
+    background: #eef9ff;
+    padding: 15px;
+}
+
+.user_details {
+    display: flex;
+    height: 90px;
+    overflow:hidden;
+}
+
+.user_image {
+    width: 25%;
+}
+
+.user_image_inner {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    padding: 2%;
+    background: #fff;
+}
+
+.user_image img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile_upload_div{
+    padding: 2% 3% 2% 0%;
+}
+.profile_upload{
+    width: 100%;
+}
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    outline: 0;
+    box-shadow: none!important;
+}
+.uploadFile_content{
+    padding: 2% 2%;
+}
+.first_column_para {
+    padding: 15px 15px;
+}
+
+.first_column_para p {
+    font-size: 12px;
+    text-align: left;
+}
+
+.user_description {
+    width: 75%;
+    padding: 0px 15px;
+}
+
+.user_table {
+    margin-top: 10px;
+}
+
+.user_table_head {
+    color: #9e9e9e;
+    font-size: 12px;
+}
+
+.user_table_desc {
+    color: #4374ff;
+    font-size: 12px;
+}
+
+.first_column_user_name {
+    margin: 0px;
+    font-size: 14px!important;
+    font-weight: 700;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #c8d1d6;
+}
+
+.project_section {
+    border: 1px solid #c8d1d6;
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.project_sr_no {
+    width: 20%;
+}
+
+.project_title_main {
+    width: 65%;
+}
+
+.project_achievments {
+    width: 15%;
+}
+
+.project_sr_no fig {
+    border: 1px solid #c8d1d6;
+    border-radius: 50%;
+    background: #fff;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    display: inline-block;
+    line-height: 1.6em;
+    text-align: center;
+    width: 40px;
+    font-size: 15px;
+    height: auto;
+    padding: 10px;
+    color: #9e9e9e;
+    margin-top: 2px;
+}
+
+.project_title_main h5 {
+    margin: 0px;
+    color: #4374ff;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.project_achievments h5 {
+    margin: 0px;
+    color: #4374ff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.project_title_main small {
+    color: #9e9e9e;
+}
+
+.project_achievments small {
+    color: #9e9e9e;
+}
+
+.project_button_section {
+    background: #4374ff;
+    margin-top: 10px;
+}
+
+.project_modal_btn {
+    width: 10%;
+}
+
+.project_modal_btn_name {
+    width: 90%;
+    font-size: 14px;
+    color: #fff;
+    margin-top: 4px;
+}
+
+.btn_project_modal {
+    width: 100%;
+    display: inline-flex!important;
+}
+
+.btn_project_modal {
+    padding: 8px 0px !important;
+    border-bottom: 1px solid #fff !important;
+    border-radius: 0px !important;
+}
+
+.Tech_section h4 {
+    margin-top: 0px;
+}
+
+.formSection label {
+    color: #191919;
+    font-weight: 500;
+    font-size: 13px!important;
+    margin-left: 0;
+}
+.activity_status_body{padding:15px!important;}
+.modal_alert_footer button{margin:0px!important;border-radius: 0px;}
+.ActivityTitle,.ActivityDate{padding:0px!important;}
+/* Create a custom checkbox */
+
+.container1 {
+    display: block;
+    position: relative;
+    padding-left: 28px !important;
+    margin-bottom: 0px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-right: 10px;
+    padding-top: 2px;
+    font-size: 15px;
+    margin-left: 10px !important;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.container1 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox-1 {
+    position: absolute;
+    top: 6px;
+    left: 0px;
+    height: 15px;
+    width: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #9B9B9B;
+    padding-right: 8px;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.container1:hover input~.checkbox-1 {
+    background-color: #fff;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container1 input:checked~.checkbox-1 {
+    background-color: #5A84F8;
+    border-color: #5A84F8;
+    border-radius: 2px;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkbox-1:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.container1 input:checked~.checkbox-1:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container1 .checkbox-1:after {
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* Custom radio button style  */
+
+.radio_custom input[type=radio]:checked~label {
+    color: black !important;
+}
+
+.radio_custom input[type="radio"]:checked,
+.radio_custom input[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.radio_custom input[type="radio"]:checked+label,
+.radio_custom input[type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+    font-weight: normal !important;
+    font-size: 15px !important;
+}
+
+.radio_custom input[type="radio"]:checked+label:before,
+.radio_custom input[type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #9B9B9B;
+    border-radius: 100%;
+    background: #fff;
+}
+
+.radio_custom input[type="radio"]:checked+label:after,
+.radio_custom input[type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #5A84F8;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.radio_custom input[type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+
+.radio_custom input[type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.radio-inline {
+    width: 50%;
+    display: flex;
+}
+
+.mg_label_text {
+    margin-top: 2px;
+}
+
+
+/* End of Custom radio button style  */
+
+.meeting_count {
+    margin-bottom: 0px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 2px 9px!important;
+    font-size: 14px!important;
+    height: 34px;
+}
+
+.meeting_section {
+    padding: 5px 14px;
+}
+
+.meeting_title {
+    width: 90%;
+    font-size: 1.0vw;
+    color: #fff;
+    margin-top: 4px;
+    text-align: left;
+}
+
+.skills_section {
+    background: #eef9ff;
+    padding: 15px;
+    margin-top: 10px;
+    height: 560px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.skills_section_inner {
+    display: block;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.skills_text {
+    background: #fff;
+    border-radius: 50px;
+    padding: 4px 15px;
+    height: 25px;
+    margin: 5px;
+    width: auto;
+    display: inline-block;
+    font-size: 12px;
+    border: 1px solid #eee;
+}
+.skills_text1 {
+    background: #fff;
+    border-radius: 50px;
+    padding: 4px 15px;
+    height: 25px;
+    margin: 5px;
+    width: auto;
+    display: inline-block;
+    font-size: 12px;
+    border: 1px solid #eee;
+}
+.skills_text2 {
+    background: #fff;
+    border-radius: 50px;
+    padding: 4px 15px;
+    height: 25px;
+    margin: 5px;
+    width: auto;
+    display: inline-block;
+    font-size: 12px;
+    border: 1px solid #eee;
+}
+.skills_text3 {
+    background: #eef9ff;
+    border-radius: 50px;
+    padding: 7px 15px 7px 15px;
+    height: 33px;
+    margin: 5px;
+    width: auto;
+    display: inline-block;
+    font-size: 12px;
+    border: 1px solid #eee;
+}
+.ActivityStatus {
+    display: inline-flex;
+    background: #eef9ff;
+    padding: 6px 0px 2px 0px;
+    border-radius: 50px;
+    border: 1px solid #c8d1d6;
+}
+.motivator_inner_row {
+    background: #fff;
+    padding: 15px;
+}
+.motivation_section {
+    background: #eef9ff;
+    padding: 15px;
+    margin-top: 10px;
+
+}
+.SelectMotivatorDIV{
+    height: 215px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.SelectMotivatorDIV_3{
+    height: 175px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display:block;
+    padding: 0px 10px;
+}
+.SelectProjectDIV{
+    height: 405px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.document_view_DIV_overflow{
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-top:15px;
+}
+.document_view_DIV{
+    width:100%;
+    height: 255px;
+    margin: -15px 15px 0px 15px;
+}
+.Document_Repository{
+    display:inline-block;
+}
+.document_view_section {
+    background: #eef9ff;
+    padding: 0px 15px 15px 15px;
+}
+.document_view_block_inner{
+    background: #ffffff !important;
+    color: #323232;
+    display:inline-flex;
+    height: 70px;
+    padding: 15px 0px;
+    width:100%;
+    margin-top:15px;
+}
+.file_icon{
+padding: 5px 15px!important;
+}
+.file_title_main{
+padding: 0px 0px 15px 35px!important;
+}
+.file_title{
+    display: -webkit-box;
+    max-height: 2.2rem;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 1;
+    font-size: 12px;
+    line-height: 1.9rem;
+}
+.file_download_icon{
+padding: 5px 10px!important;
+}
+.file_delete_icon{
+padding: 5px 0px 5px 20px!important;
+}
+.file_download_icon img{
+    width:20px;
+    cursor: pointer;
+} 
+.file_delete_icon img{
+    width:18px;
+    cursor: pointer;
+}    
+.motivate_btn {
+    background: #4374ff!important;
+    color: #fff!important;
+    padding: 5px 10px!important;
+    font-size: 12px!important;
+    float: right!important;
+    line-height: 16px!important;
+    vertical-align: unset!important;
+    height: 30px !important;
+}
+.motivate_btn img
+{
+    width: 10px;
+    vertical-align: initial;
+    margin-right: 4px;
+}
+.Document_title{
+   margin:10px 0px!important;
+   padding-left: 0px!important;
+   padding-right: 0px!important;
+}
+.Project_title{
+    margin: 0px 0px 0px 0px!important;
+    padding-left: 0px!important;
+    padding-right: 0px!important;
+ }
+ .Project_title h4{
+    margin: 17px 0px 0px 0px;
+    padding: 0px;
+ }
+.Document_title h4{
+    color: #232323;
+    font-size: 14px!important;
+    font-weight: 600;
+    margin: 5px 5px 5px 0px;
+    font-size: 14px!important;
+    padding: 0px;
+}
+.document_btn{
+    padding: 0px 10px!important;
+    height: 30px !important;
+}
+.document_btn span{
+    color: #fff!important;
+    font-size: 1vw;
+    font-weight: 400;
+}
+.major_project_btn{
+    font-size: 1vw!important;    
+}
+.remove-
+.motivate_title h4 {
+    font-size: 17px!important;
+    color: #4374ff!important;
+    margin-top: 5px!important;
+    font-weight: 400!important;
+}
+
+.modal-header {
+    padding: 5px 10px!important;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header,
+.modal-footer {
+    background: #ffffff!important;
+    color: #4374ff!important;
+    border: none !important;
+}
+
+.modal_label {
+    font-weight: 400;
+    color: #495057;
+}
+
+.modal_btn {
+    color: #fff!important;
+    background: #4374ff!important;
+    padding: 2px 15px!important;
+}
+
+.btn-flat {
+    border-radius: 0px!important;
+}
+
+.meeting-details {
+    padding: 8px 0px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.meeting-details-item {
+    flex-basis: 33.33%;
+    border-right: 2px solid #7aaafe;
+    padding: 0px 0px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 1.0vw;
+}
+
+.block-head {
+    color: #232323;
+    font-size: 14px !important;
+}
+.skill_box .skills_text
+{
+    padding: 7px 35px 7px 15px;
+    height: 33px;
+}
+.skills_text_active,
+.active-project
+{
+    background:#4374ff !important;
+    color:#fff;
+	cursor: pointer;
+}
+.skills_text.active, .skills_text:hover{
+    background:#4374ff !important;
+    color:#fff;
+	cursor: pointer;
+}
+.skills_text1.active, .skills_text1:hover{
+    background:#4374ff !important;
+    color:#fff;
+	cursor: pointer;
+}
+.skills_text2.active, .skills_text2:hover{
+    background:#4374ff !important;
+    color:#fff;
+	cursor: pointer;
+}
+.skills_text3.active, .skills_text3:hover{
+    background:#4374ff !important;
+    color:#fff;
+	cursor: pointer;
+}
+
+.remove-skill
+{
+    right: 12px;
+    width: 9px;
+    top: 12px;
+    cursor:pointer;
+}
+.modal-body {
+    padding: 10px 30px 22px 30px !important;
+}
+.modal-header, .modal-footer {
+  
+    padding: 15px 30px !important;
+   
+}
+.modal-sm {
+    max-width: 386px;
+    width: 386px !important;
+}
+.modal_input
+{
+    margin:0px !important
+}
+.modal_label {
+  
+    margin-left: 0;
+}
+@media screen and (min-width: 320px) {
+
+}
+@media screen and (min-width: 480px) {
+
+}
+@media screen and (min-width: 768px) {
+
+}
+@media screen and (min-width: 992px) {
+
+}
+
+@media only screen and (min-device-width:993px) and (max-device-width:1024px)
+{
+    .meeting-details-item {    
+        font-size: 9px!important;
+    }
+    .meeting_title {
+        
+        font-size: 9px!important;       
+    }
+    .meeting_count {    
+        padding: 0px 9px!important;
+        font-size: 14px!important;
+    }
+    .user_image_inner {
+        width: 70px;
+        height: 70px;
+    }
+    .Document_title span {
+        color: #232323;
+        font-size: 11px !important;
+        font-weight: 600;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .meeting_title {
+        width: 90%;
+        font-size: 14px!important;
+        color: #fff;
+        margin-top: 4px;
+        text-align: left;
+    }
+}
+@media screen and (min-width: 1366px) {
+    .meeting_title {
+        width: 90%;
+        font-size: 14px!important;
+        color: #fff;
+        margin-top: 4px;
+        text-align: left;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .meeting_title {
+        width: 90%;
+        font-size: 14px!important;
+        color: #fff;
+        margin-top: 4px;
+        text-align: left;
+    }
+}
+@media screen and (min-width: 1680px) {
+    .meeting_title {
+        width: 90%;
+        font-size: 14px!important;
+        color: #fff;
+        margin-top: 4px;
+        text-align: left;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .meeting_title {
+        width: 90%;
+        font-size: 14px!important;
+        color: #fff;
+        margin-top: 4px;
+        text-align: left;
+    }
+}
+.panel-group .panel-heading+.panel-collapse>.list-group, .panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 1px solid #ececec;
+    padding: 1px;
+}
+.ed_inner{
+   background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+        border-bottom: 10px solid #ececec;
+}
+.ed_inner .title{
+    color: #4374ff;
+    font-size: 16px !important;
+}
+.dropdown-toggle::after {
+    position: relative;
+    top: 9px;
+    opacity: .8;
+    margin-left: 0px;
+    float: right;
+}
+.btn .caret {
+    margin-left: 0;
+    display:none;
+}
+.doc_repo{
+    border-radius: 60px;
+    padding: 7px 15px;
+    background: #eef9ff;
+}
+.progress {
+    display: -ms-flexbox;
+    display: flex;
+    height: 13px!important;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: 50px!important;
+    margin-bottom:0px!important;
+}
+.profile_complete h6{margin:0px 0px 2px 0px!important;}
+

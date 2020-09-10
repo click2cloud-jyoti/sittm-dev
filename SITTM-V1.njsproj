@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>SITTM-V1</Name>
+    <RootNamespace>SITTM-V1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>dc7a5078-fc2d-4f57-9dcb-73a8437d043f</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>app.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="app.js" />
+    <Content Include="config.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controller\access-controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controller\common-controller\common-controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controller\dashboard-controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controller\global-view-controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controller\home-controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controller\individual-cards-controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="controller\IndividualCardController\IndividualCard.js" />
+    <Content Include="controller\ManagerController\ManagerView.js" />
+    <Content Include="controller\tz-view-controller.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="public\fonts\fa-solid-900.eot" />
+    <Content Include="public\fonts\fa-solid-900.svg" />
+    <Content Include="public\fonts\fa-solid-900.ttf" />
+    <Content Include="public\fonts\fa-solid-900.woff" />
+    <Content Include="public\fonts\fa-solid-900.woff2" />
+    <Content Include="public\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="public\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="public\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="public\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="public\images\avatars\1.jpg" />
+    <Content Include="public\images\avatars\10.jpg" />
+    <Content Include="public\images\avatars\11.jpg" />
+    <Content Include="public\images\avatars\12.jpg" />
+    <Content Include="public\images\avatars\2.jpg" />
+    <Content Include="public\images\avatars\3.jpg" />
+    <Content Include="public\images\avatars\4.jpg" />
+    <Content Include="public\images\avatars\5.jpg" />
+    <Content Include="public\images\avatars\8.jpg" />
+    <Content Include="public\images\avatars\9.jpg" />
+    <Content Include="public\images\banner.png" />
+    <Content Include="public\images\comment_icon.svg" />
+    <Content Include="public\images\cross_delete_white_icon.svg" />
+    <Content Include="public\images\cross_icon.svg" />
+    <Content Include="public\images\favicon-16x16.png" />
+    <Content Include="public\images\favicon-32x32.png" />
+    <Content Include="public\images\favicon-96x96.png" />
+    <Content Include="public\images\favicon.ico" />
+    <Content Include="public\images\filter_icon.svg" />
+    <Content Include="public\images\flagblue_icon.svg" />
+    <Content Include="public\images\flagred_icon.svg" />
+    <Content Include="public\images\icons\abort.svg" />
+    <Content Include="public\images\icons\add new project_icon.svg" />
+    <Content Include="public\images\icons\Add_icon.svg" />
+    <Content Include="public\images\icons\back_icon.svg" />
+    <Content Include="public\images\icons\cross_delete_icon.svg" />
+    <Content Include="public\images\icons\cross_icon.svg" />
+    <Content Include="public\images\icons\Edit_icon.svg" />
+    <Content Include="public\images\icons\flagblue_icon.svg" />
+    <Content Include="public\images\icons\flagred_icon.svg" />
+    <Content Include="public\images\icons\minus_icon.svg" />
+    <Content Include="public\images\logo-inverse.png" />
+    <Content Include="public\images\logo.svg" />
+    <Content Include="public\images\placeholder_image.svg" />
+    <Content Include="public\images\placlder.png" />
+    <Content Include="public\images\plus_icon.svg" />
+    <Content Include="public\images\search_icon.svg" />
+    <Content Include="public\images\SITTM_fevicon.png" />
+    <Content Include="public\images\talent_icons\Add icon-plus icon.svg" />
+    <Content Include="public\images\talent_icons\comment_icon.svg" />
+    <Content Include="public\images\talent_icons\cross_icon.svg" />
+    <Content Include="public\images\talent_icons\filter_icon.svg" />
+    <Content Include="public\images\talent_icons\flagblue_icon.svg" />
+    <Content Include="public\images\talent_icons\flagred_icon.svg" />
+    <Content Include="public\images\talent_icons\globalView.jpg" />
+    <Content Include="public\images\talent_icons\home_pic.png" />
+    <Content Include="public\images\talent_icons\Masthead.png" />
+    <Content Include="public\images\talent_icons\minus_icon.svg" />
+    <Content Include="public\images\talent_icons\resources_joined_icon.svg" />
+    <Content Include="public\images\talent_icons\resources_left_icon.svg" />
+    <Content Include="public\images\talent_icons\resources_total-icon.svg" />
+    <Content Include="public\images\talent_icons\search_icon.svg" />
+    <Content Include="public\images\talent_icons\timezone_icon.svg" />
+    <Content Include="public\images\talent_icons\total_teams_icon.svg" />
+    <Content Include="public\images\users\user_1.jpg" />
+    <Content Include="public\images\users\user_default.png" />
+    <Content Include="public\javascripts\main.js" />
+    <Content Include="public\stylesheets\individual_card.css" />
+    <Content Include="public\stylesheets\main.css" />
+    <Content Include="routes\index.js" />
+    <Content Include="routes\users.js" />
+    <Content Include="package.json" />
+    <Content Include="public\stylesheets\oldmain.css" />
+    <Content Include="README.md" />
+    <Content Include="views\index.pug" />
+    <Content Include="views\layout.pug" />
+    <Content Include="views\error.pug" />
+    <Content Include="views\sample-view\charts-chartjs.html" />
+    <Content Include="views\sample-view\components-accordions.html" />
+    <Content Include="views\sample-view\components-calendar.html" />
+    <Content Include="views\sample-view\components-carousel.html" />
+    <Content Include="views\sample-view\components-maps.html" />
+    <Content Include="views\sample-view\components-modals.html" />
+    <Content Include="views\sample-view\components-notifications.html" />
+    <Content Include="views\sample-view\components-pagination.html" />
+    <Content Include="views\sample-view\components-progress-bar.html" />
+    <Content Include="views\sample-view\components-scrollable-elements.html" />
+    <Content Include="views\sample-view\components-tooltips-popovers.html" />
+    <Content Include="views\sample-view\dashboard-boxes.html" />
+    <Content Include="views\sample-view\dashboard.html" />
+    <Content Include="views\sample-view\elements-badges-labels.html" />
+    <Content Include="views\sample-view\elements-buttons-standard.html" />
+    <Content Include="views\sample-view\elements-cards.html" />
+    <Content Include="views\sample-view\elements-dropdowns.html" />
+    <Content Include="views\sample-view\elements-icons.html" />
+    <Content Include="views\sample-view\elements-list-group.html" />
+    <Content Include="views\sample-view\elements-navigation.html" />
+    <Content Include="views\sample-view\elements-utilities.html" />
+    <Content Include="views\sample-view\error.pug" />
+    <Content Include="views\sample-view\form.html" />
+    <Content Include="views\sample-view\forms-controls.html" />
+    <Content Include="views\sample-view\forms-layouts.html" />
+    <Content Include="views\sample-view\forms-validation.html" />
+    <Content Include="views\sample-view\globalView.html" />
+    <Content Include="views\sample-view\home.html" />
+    <Content Include="views\sample-view\index.html" />
+    <Content Include="views\sample-view\index.pug" />
+    <Content Include="views\sample-view\individual_card.css" />
+    <Content Include="views\sample-view\individual_card.html" />
+    <Content Include="views\sample-view\layout.pug" />
+    <Content Include="views\sample-view\main.css" />
+    <Content Include="views\sample-view\manager-view.html" />
+    <Content Include="views\sample-view\smml.html" />
+    <Content Include="views\sample-view\smmlold.html" />
+    <Content Include="views\sample-view\tables-regular.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="controller\" />
+    <Folder Include="controller\common-controller\" />
+    <Folder Include="controller\IndividualCardController\" />
+    <Folder Include="controller\ManagerController\" />
+    <Folder Include="public\" />
+    <Folder Include="public\fonts\" />
+    <Folder Include="public\images\" />
+    <Folder Include="public\images\avatars\" />
+    <Folder Include="public\images\icons\" />
+    <Folder Include="public\images\talent_icons\" />
+    <Folder Include="public\images\users\" />
+    <Folder Include="public\javascripts\" />
+    <Folder Include="public\stylesheets\" />
+    <Folder Include="routes\" />
+    <Folder Include="views\" />
+    <Folder Include="views\sample-view\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

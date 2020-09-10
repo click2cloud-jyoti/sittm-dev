@@ -1,0 +1,1359 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cards - Individual</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
+    <meta name="description"
+        content="Wide selection of cards with multiple styles, borders, actions and hover effects.">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <link href="stylesheets/main.css" rel="stylesheet">
+    <link href="stylesheets/alert_modal.css" rel="stylesheet">
+    <script type="text/javascript" src="javascripts/main.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="<%= angularJS %>"></script>
+    <script src="javascripts/smml_view.js"></script>
+    <link href="stylesheets/Pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="stylesheets/smml.css" rel="stylesheet">
+
+    <style type="text/css">
+        /* loader */
+
+        .sittmloader {
+            content: url(images/loader_sittm.gif);
+            width: 15%;
+            height: auto;
+            margin: 0 auto !important;
+            margin-top: 5%;
+            padding-top: 10%;
+        }
+
+        #notiificationContainer {
+            visibility: visible;
+            padding-top: 0%;
+            text-align: center;
+            height: 850px;
+            margin: 0 auto;
+            background: #eef9ff !important;
+            opacity: 0.8;
+        }
+
+        /* loader */
+        .col {
+            padding: 8px
+        }
+
+        #myModal1 .modal-footer {
+            background: #fff !important;
+            padding: 15px 80px
+        }
+
+        #myModal1 .modal-dialog {
+            width: 386px;
+        }
+
+        #myModal1 .modal-header {
+            padding: 6px 14px
+        }
+
+        #myModal2 .modal-header,
+        .modal-footer {
+            background: #fff !important;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: 0 !important;
+
+        }
+
+        #myModal2 .modal {
+            top: 13%
+        }
+
+        #myModal2 .star {
+            color: red
+        }
+
+        #myModal2 .modal-content {
+            border: 0 !important;
+            border-radius: 0
+        }
+
+        #myModal2 label {
+            font-size: 11px
+        }
+
+        #myModal2 h4 {
+            font-size: 17px;
+            color: #4f7cfb
+        }
+
+        #myModal2 .modal .widget-heading {
+            font-size: 14px !important
+        }
+
+        #myModal2 .modal .widget-subheading {
+            color: #4f7cfb;
+            font-size: 11px !important
+        }
+
+        #myModal2 .form-control {
+            font-size: 11px
+        }
+
+        #myModal2 .modal-body {
+            padding: 10px 30px
+        }
+
+        #myModal2 .modal-footer .btn {
+            padding: 5px 11px
+        }
+
+        #myModal2 .modal-dialog {
+            width: 386px
+        }
+
+        #myModal2 .form-group {
+            margin: 0
+        }
+
+        .list-group {
+            padding-top: 22px;
+        }
+
+        .pe-7s-look {
+            font-size: 1.5em;
+        }
+
+        .widget-content .pe-7s-look {
+            line-height: 27px;
+        }
+
+        .active .pe-7s-look {
+            color: #3f6ad8;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .active {
+            background: #e0f3ff
+        }
+
+        .manager-info {
+            color: #495057
+        }
+
+        .list-group-item {
+            border-bottom: 1px solid #efefef !important;
+        }
+
+        .banner {
+            padding-top: 140px;
+            color: #fff
+        }
+
+        h1 {
+            margin-bottom: 40px
+        }
+
+        .banner a {
+            background: #fb4f77f7;
+            color: #fff;
+            padding: 12px 50px;
+            font-size: 15px;
+            border-radius: 2px
+        }
+
+        #hero-banner {
+            background: url('images/banner.png')0 0 no-repeat;
+            height: 400px;
+            margin-bottom: 60px;
+            background-size: cover;
+        }
+
+        .team-col .active {
+            background: #edf9ff;
+        }
+
+        .team-col .card {
+            border: 1px solid #E5EBEE;
+            border-radius: 0.25rem;
+        }
+
+        .card {
+            padding: 10px
+        }
+
+        .widget-heading {
+            font-size: 11px !important;
+            font-weight: 600 !important;
+            color: #495057;
+        }
+
+
+        .white-box {
+            background: #fff;
+            padding: 5px 16px;
+            border: 1px solid #E5EBEE;
+            border-radius: 0.25rem;
+            margin-bottom: 8px;
+        }
+
+        h5 {
+            font-size: 12px;
+            color: #4f7cfb;
+            font-weight: 600
+        }
+
+        p {
+            margin: 0;
+            font-size: 12px
+        }
+
+        .widget-subheading {
+            font-size: 11px !important
+        }
+
+        .card-head {
+            font-size: 15px;
+            color: #4f7cfb;
+            font-weight: 600
+        }
+
+        .card-subhead {
+            font-size: 15px;
+            font-weight: 600
+        }
+
+        .input-group-text {
+            background: #fff;
+        }
+
+        .modal-header,
+        .modal-footer {
+            background: #fff !important;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: 0 !important;
+
+        }
+
+        .star {
+            color: red
+        }
+
+        .modal-content {
+            border: 0 !important;
+            border-radius: 0
+        }
+
+        label {
+            font-size: 11px
+        }
+
+        h4 {
+            font-size: 15px;
+            color: #4f7cfb
+        }
+
+        .modal .widget-subheading {
+            color: #4f7cfb;
+            font-size: 11px
+        }
+
+        .form-control {
+            font-size: 11px
+        }
+
+        .modal-body {
+            padding: 10px 30px
+        }
+
+        .modal-footer .btn {
+            padding: 5px 11px
+        }
+
+        .modal-dialog {
+            width: 500px
+        }
+
+        .form-group {
+            margin: 0
+        }
+
+        .widget-content .widget-content-right {
+            position: absolute;
+            right: 0
+        }
+
+        .widget-content .widget-content-left .widget-heading {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            -webkit-line-clamp: 2;
+            margin-bottom: 2px !important;
+            line-height: 1.2 !important;
+            padding-bottom: 6px;
+            height: 29px;
+        }
+
+        .filter-btn {
+            border: 1px solid #ccc;
+            background: none;
+            padding: 4px 6px;
+            width: 100px;
+            border-radius: 0.25rem;
+        }
+
+        .manager-name p {
+            font-size: 11px;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            -webkit-line-clamp: 1;
+            height: 14px;
+            margin-bottom: 5px;
+        }
+
+        .manager-name {
+            min-height: 60px;
+        }
+
+        .search-container .form-control,
+        .search-container .input-group-text {
+
+            border: 1px solid #E2E8EC;
+
+        }
+
+        button p {
+            float: left;
+            font-size: 14px
+        }
+
+        .text-danger {
+            font-size: 18px;
+            margin: 8px 0
+        }
+
+        .updates p span {
+            color: #4f7cfb;
+        }
+
+        .updates p {
+            font-size: 12px;
+        }
+
+        /*left tabs*/
+        .head,
+        .filter {
+            padding: 5px 0px
+        }
+
+        .nav-tabs .nav-link.active,
+        .nav-tabs .nav-link {
+            color: #495057;
+            padding: 5px 5px 5px 10px;
+            border: 0;
+            float: left;
+            background: #fff;
+        }
+
+        .manager-col .widget-content-right {
+            float: right;
+        }
+
+        .rm-list-borders-scroll .list-group-item {
+            padding: 0px
+        }
+
+        .rm-list-borders-scroll .list-group-item:hover {
+            background: #e0f3ff;
+            color: #fff
+        }
+
+        .nav_selected {
+            background: #e0f3ff;
+            color: #fff
+        }
+
+        .nav-tabs .nav-link.active,
+        .nav-tabs .nav-item.show .nav-link {
+            color: #fff;
+            padding: 5px 5px 5px 10px;
+            border: 0;
+            float: left;
+            background: #507dfb !important;
+            border-radius: 0px !important;
+        }
+
+        .nav-link.active .widget-heading {
+            color: #fff !important;
+        }
+
+        .nav-link.active .widget-subheading:hover {
+            color: #fff !important;
+        }
+
+        .nav-link.active .widget-heading,
+        .nav-link:hover .widget-heading {
+            color: #507dfb;
+        }
+
+        /*.rm-list-borders-scroll .list-group-item:hover .widget-content-right a{color: #fff} */
+        .search-container .form-control {
+            border-left: 0
+        }
+
+        .search-container {
+            margin-bottom: 16px
+        }
+
+        .modal-content {
+            background-clip: initial !important
+        }
+
+        .selected {
+            background: #4175FF;
+        }
+
+        /* . {
+            position: relative;
+            margin: 0 auto;
+            max-width: 400px;
+        } */
+
+        /* Select the image and make it absolute to the container */
+        /* . img {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            overflow: hidden;
+
+        } */
+
+
+        /* . .__front-image {
+            z-index: 9999;
+            transition: opacity .5s linear;
+            cursor: pointer;
+        }
+
+
+        .:hover>.__front-image {
+            opacity: 0;
+        } */
+
+
+        .selected:hover {
+            background: #4175FF !important;
+        }
+
+        .nav-item.selected .widget-heading,
+        .nav-item.selected .widget-subheading {
+            color: #fff;
+        }
+
+        .card .widget-subheading,
+        .card .widget-heading {
+            color: #495057 !important;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: normal;
+            -webkit-line-clamp: 1;
+            margin-bottom: 2px !important;
+            line-height: 1.2 !important;
+            padding-bottom: 6px;
+            height: 15px;
+        }
+
+        @media(max-width:767px) {
+            h1 {
+                font-size: 30px
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 7px;
+            height: 7px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #98cbe6;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4374ff;
+        }
+
+        .widget-content-right,
+        .white-box a {
+            background: url('images/view_icon.svg')9px 11px no-repeat;
+            background-size: 25px;
+        }
+
+        .widget-content-right:hover,
+        .white-box a:hover {
+            background: url('images/view_icon_blue.svg')9px 11px no-repeat;
+            background-size: 25px;
+        }
+
+        .card_block .col-md-3 {
+            max-width: 20%;
+        }
+
+        .remove_talent {
+            font-size: 17px;
+            color: #d92550 !important;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .remove_talent:hover {
+            color: #525252 !important;
+        }
+
+        .remove_talent img {
+            width: 15px;
+            margin-right: 4px;
+        }
+
+        #TalentRemove .modal-footer {
+            background: #fff !important;
+            padding: 15px 80px
+        }
+
+        #TalentRemove .modal-dialog {
+            width: 386px;
+        }
+
+        #TalentRemove .modal-header {
+            padding: 6px 14px
+        }
+
+        #TalentRemove .modal-footer {
+            background: #fff !important;
+            padding: 15px 80px !important;
+        }
+
+        #TalentRemove .modal-body {
+            padding: 10px 30px !important;
+        }
+
+        #TalentRemove .modal-footer>:not(:last-child) {
+            margin-right: .25rem !important;
+        }
+
+        .modal-header .close {
+            margin-top: -1rem !important;
+        }
+
+        .close {
+            float: right;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            filter: alpha(opacity=20);
+            opacity: .5 !important;
+        }
+
+        .dropdown-toggle::after {
+            margin-left: 12px
+        }
+
+        .dropup .dropdown-toggle::after {
+            content: none;
+        }
+
+        .dropup {
+            top: 6px;
+        }
+
+        .dropup .dropdown-menu:before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 0px;
+            left: 69%;
+            bottom: 5px;
+            border: 8px solid transparent;
+            border-bottom: 0;
+            border-top: 15px solid #fff;
+            transform: translate(-50%, calc(100% + 5px));
+        }
+
+        .dropdown-menu.show {
+            top: -54px !important;
+            left: -5px !important;
+            padding: 10px 15px 20px 15px;
+            width: 393px;
+        }
+
+        .popclickbtn {
+            outline: none !important;
+            border: none;
+            background: none;
+            cursor: pointer;
+            position: absolute;
+            top: -7px;
+            right: 0px;
+        }
+
+        .popclosebtn {
+            cursor: pointer;
+        }
+
+        .popdiv {
+            position: absolute;
+            right: -9px;
+            top: 25px;
+            width: 133px;
+            border: 1px solid #eaeaea;
+            border-radius: 3px;
+            text-align: left;
+            padding: 1px;
+            z-index: 100;
+            box-shadow: 0px 0px 20px 2px #d1d1d1;
+            background: #fff;
+        }
+
+        .tooltip-info {
+            background: #fff;
+            padding: 3px;
+            height: auto;
+        }
+
+        .nav-item.nav-item-header {
+            text-transform: uppercase;
+            font-size: .73333rem;
+            color: #6c757d;
+            font-weight: bold;
+            padding: 0px;
+        }
+
+        .remove_title {
+            font-size: 12px;
+            color: #444;
+            text-transform: none;
+            font-weight: 400;
+        }
+
+        .remove_title:hover {
+            color: #4374ff !important;
+        }
+
+        .remove_title img {
+            height: 13px;
+            margin: 5px;
+        }
+
+        /* Position tooltip above the element */
+
+        .popdiv:after {
+            position: absolute;
+            top: -10px;
+            right: 9px;
+            margin-left: 55px;
+            width: 0;
+            content: " ";
+            font-size: 0;
+            background: #eeeeee;
+            line-height: 0;
+            border-bottom-style: solid;
+            border-bottom-width: 10px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-bottom-color: #fff;
+        }
+
+        /* Hide the tooltip content by default */
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link.active:parent {
+            background: #4175FF;
+        }
+
+        .selected {
+            background: #4175FF;
+        }
+
+        .selected:hover {
+            background: #4175FF !important;
+        }
+
+        .js-is-hidden {
+            display: none;
+        }
+
+        @media only screen and (max-width:999px) and (min-width:768px) {
+
+            .widget-heading {
+                font-size: 9px !important;
+
+            }
+
+            .widget-subheading {
+                font-size: 9px !important;
+            }
+        }
+
+        .dashboard_smml {
+            position: relative;
+            display: -ms-flex;
+            display: flex !important;
+            -ms-flex-direction: unset;
+            flex-direction: unset !important;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(0, 0, 0, .125);
+            border-radius: .25rem;
+        }
+
+        .db_count {
+            color: #ffffff !important;
+            font-size: 30px !important;
+            height: auto !important;
+            font-weight: 300 !important;
+        }
+
+        .db_sub_title {
+            color: #ffffff !important;
+            font-size: 11px;
+        }
+
+        .count-icons {
+            position: relative;
+            top: 0;
+            right: 20px;
+        }
+
+        .col-pad {
+            padding: 0px 15px 0px 0px;
+        }
+
+        .bg-success,
+        .bg-warning {
+            font-size: 10px;
+            text-align: center;
+            display: inline-table;
+            justify-content: center;
+            padding: 0px 5px 0px 5px;
+        }
+
+        .pbar-count {
+            font-size: 10px;
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+    </style>
+</head>
+
+<body class="" id="smmlBody">
+    <div ng-app="smmlApp" ng-controller="smmlController" ng-cloak>
+
+        <!-- PAGE CONTAINER 1-START -->
+        <div id="notiificationContainer" ng-show="smml_loader">
+            <div class="sittmloader">
+                <span id="loader_text" style="font-size: 20px;">Fetching Data...!</span>
+            </div>
+            <!-- <span id="loader_text" style="font-size: 20px;">Fetching Data...!</span> -->
+        </div>
+        <div class="page-container" ng-show="showContainer" ng-init="init('<%= data %>')">
+            <div class="row ">
+                <div class="col-md-8">
+                    <div class="main-head">
+                        <h3 class="card-head m-0">Managers &amp; Team Info</h3>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <div class="updates float-right text-right">
+                        <!-- <p class="mb-0">Last Updated: <span>4/23/2020 4:13 PM</span></p> -->
+                        <p class="mb-0">Last Login: <span>{{UserInfo.lastLoginTime || null}}</span></p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+        </div>
+        <!-- PAGE CONTAINER 1-END -->
+
+        <!-- PAGE CONTAINER 2-START -->
+        <div class="page-container">
+            <!-- END OF ROW MAIN -->
+            <div class="row">
+                <!--LEFT SECTION COL-MD-4 -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="manager-col" style="overflow: auto; outline: none;">
+                        <div class="row m-0">
+                            <div class="col-md-6 pl_0">
+                                <div class="head">
+                                    <h3 class="card-head">Managers</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="filter">
+                                    <button class="filter-btn float-right">
+                                        <p>Filter</p><img src="images/filter_icon.svg" class="float-right">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="nav nav-tabs rm-list-borders rm-list-borders-scroll list-group list-group-flush"
+                            role="tablist">
+
+                            <li class="nav-item list-group-item" ng-repeat="manager in managerInfoList track by $index">
+                                <a class="nav-link" ng-class="{'active':$index==0}" href="#profile" role="tab"
+                                    data-toggle="tab" ng-click="getManagerInfo(manager)" style="width: 100%;">
+                                    <div class="widget-content p-0">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left mr-3">
+                                                <img width="42" class="rounded-circle"
+                                                    src="images/placeholder_image.svg" alt="" style="margin-top: 1px;">
+                                            </div>
+                                            <div class="manager_list_left">
+                                                <div class="widget-heading">{{manager.name}} ({{manager.email}})</div>
+                                                <div class="widget-subheading">{{manager.standard_title}}</div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </a>
+                                <div class="widget-content-right manager_profile_eye_left">
+                                    <a href="/manager-view?data={{hrefDirectFunct(manager)}}" type="button"
+                                        class="btn btn-default custom-tooltip">
+                                        <div class="tooltip-text"> View Profile <i class="fa fa-caret-down "
+                                                aria-hidden="true"></i></div>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- END OF COL-MD-4 -->
+                <!-- RIGHT SECTION COL-MD-8 -->
+                <div class="col-md-8 col-sm-8 col-xs-12" style="padding-left: 0px;">
+                    <!-----------------Dashboard------------------->
+                    <div class="row" style="margin-left: 0px;">
+                        <div class="col-md-4 col-sm-6 col-xs-12 pl-0 col-pad">
+                            <div class="dashboard_smml mb-3 widget-content bg-midnight-bloom">
+                                <div class="widget-content-wrapper text-white">
+                                    <div class="widget-content-left col-md-10 col-sm-10 col-xs-10">
+                                        <div class="db_count">{{totalTalentCount.totaltalent || 0}}</div>
+                                        <div class="db_sub_title">Total No. of Talent</div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <div class="widget-numbers text-white">
+                                            <span class="count-icons">
+                                                <i class="pe-7s-users"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 col-pad">
+                            <div class="dashboard_smml mb-3 widget-content bg-arielle-smile">
+                                <div class="widget-content-wrapper text-white">
+                                    <div class="widget-content-left col-md-10 col-sm-10 col-xs-10">
+                                        <div class="db_count">{{totalTalentCount.lefttalent || 0}}</div>
+                                        <div class="db_sub_title">No. of Talent Left</div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <div class="widget-numbers text-white">
+                                            <span class="count-icons">
+                                                <i class="pe-7s-less"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12 col-pad">
+                            <div class="dashboard_smml mb-3 widget-content bg-grow-early">
+                                <div class="widget-content-wrapper text-white">
+                                    <div class="widget-content-left col-md-10 col-sm-10 col-xs-10">
+                                        <div class="db_count">{{totalTalentCount.last30days || 0}}</div>
+                                        <div class="db_sub_title">Not Updated Last 30 Days</div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <div class="widget-numbers text-white">
+                                            <span class="count-icons">
+                                                <i class="pe-7s-user"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="col-md-6 col-xl-3 col-pad">
+                            <div class="card mb-3 widget-content bg-love-kiss">
+                                <div class="widget-content-wrapper text-white">
+                                    <div class="widget-content-left col-md-10 col-sm-10 col-xs-10">
+                                        <div class="db_count">102</div>
+                                        <div class="db_sub_title">Not Updated Last 30 Days</div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-2 col-xs-2">
+                                        <div class="widget-numbers text-white">
+                                            <span class="count-icons">
+                                                <i class="pe-7s-user"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- TAB CONTENT -->
+                    <div class="tab-content team-col">
+                        <div id="profile" class="container tab-pane active cart-section">
+                            <div class="row">
+                                <div class="col-md-6 px_8">
+                                    <h3 class="card-head ">Team</h3>
+                                </div>
+                                <div class="col-md-6 px_8">
+                                    <div class="search-container">
+                                        <form action="/action_page.php">
+
+                                            <div class="input-group ">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><img
+                                                            src="images/search_icon.svg"></span>
+                                                </div>
+                                                <input type="text" class="form-control" placeholder="Search" id="usr"
+                                                    name="username" ng-model="searchText">
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- ROW END -->
+                            <div class="row">
+                                <div class="col-md-12 px_8">
+                                    <div class="widget-content white-box manager-block-view">
+                                        <div class="widget-content-wrapper">
+                                            <div class="widget-content-left mr-3">
+                                                <img width="35" class="rounded-circle"
+                                                    src="images/placeholder_image.svg" alt="">
+                                            </div>
+                                            <div class="widget-content-left ">
+                                                <div class="widget-heading">{{selectedManager.name}}
+                                                    ({{selectedManager.email}}) ,
+                                                    <span>{{selectedManager.standard_title}}
+                                                    </span>
+                                                    <a href="/manager-view?data={{hrefDirectFunct(selectedManager)}}"
+                                                        type="button" class="btn btn-default " data-toggle="tooltip"
+                                                        data-placement="top" title=""
+                                                        data-original-title="View Profile">
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- WIDGET END -->
+                            <div class="row card_block">
+                                <!-- BLOCK-->
+                                <div class="col-md-3 col-sm-4 col-xs-12 col text-center"
+                                    ng-repeat="talent in testTalentList=(talentList | filter: searchText)">
+                                    <div class="card ">
+                                        <div>
+                                            <a href="#" class="float-left" type="button" data-toggle="modal"
+                                                data-target="{{(talent.status?'#myModal1':'#myModal2')}}"><img
+                                                    ng-src="{{(talent.status?'images/flagred_icon.svg':'images/flagblue_icon.svg')}}"
+                                                    ng-click="escalateModelFunct(talent)"></a>
+
+                                            <div class="dropup">
+                                                <button class="popclickbtn" id="{{ 'triggerHide-' + $index + '_1'}}"
+                                                    onclick="showInfo(this.id);"><img src="images/ellipsis.svg"
+                                                        style="height: 16px;cursor: pointer;"></button>
+                                                <div class="popdiv d-none" id="{{ 'tooltip-' + $index + '_1'}}">
+                                                    <div class="tooltip-info">
+                                                        <ul class="nav flex-column">
+                                                            <li class="nav-item-header nav-item">
+                                                                <a href="#" class=" remove_title" type="button"
+                                                                    data-toggle="modal" data-target="#TalentRemove"
+                                                                    ng-click="deleteTalentFunc(talent)"><img
+                                                                        src="images/deleted_icon_blue.svg">Remove Talent
+                                                                </a>
+                                                                <!-- <img src="images/cross_icon.svg"
+                                                                                class="float-right popclosebtn"
+                                                                                id="{{ 'triggerShow-' + $index + '_1'}}"
+                                                                                onclick="hideInfo(this.id);"></li> -->
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <a href="/individual-card?data={{hrefDirectFunct(talent)}}">
+                                            <div class="manager-info">
+                                                <img width="42" class="rounded-circle"
+                                                    src="images/placeholder_image.svg" alt="">
+                                                <div class="manager-name">
+                                                    <div class="widget-heading" ng-if="talent.email!=null">
+                                                        {{talent.full_name}} {{talent.email}}
+                                                    </div>
+
+                                                    <h5>{{talent.standard_title}}</h5>
+                                                    <!-- <p>{{talent.}}</p> -->
+                                                    <p ng-if="talent.company_country!=null">({{talent.company_country}})
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-12" style="padding:0px 0px 5px 0px;">
+                                                    <div class="progress" style="width: 80%;">
+                                                        <div class="progress-bar" role="progressbar"
+                                                            aria-valuenow={{talent.progress_state}} aria-valuemin="0"
+                                                            aria-valuemax="100"
+                                                            style="width:{{talent.progress_state}}%">
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="pbar-count">{{talent.progress_state}}%</div>
+                                                </div>
+                                            </div>
+
+                                    </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 col text-center" ng-show="!testTalentList.length">
+                                <h1><img src="images/No_Talent_Found.svg"></h1>
+                            </div>
+
+                        </div>
+                        <!-- ROW END -->
+
+                    </div>
+                    <!-- PROFILE END -->
+
+
+
+
+                </div>
+                <!--  TAB CONTENT END -->
+            </div>
+            <!--  COL-MD-8 -->
+        </div>
+        <!-- END OF ROW MAIN -->
+		<!-- PAGE CONTAINER 2-END -->
+
+    <!-- The Modal -->
+    <div class="modal flag-popup remove-flag-modal  fade modal_alert" id="TalentRemove">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal"><img src="images/cross_icon.svg"></button>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <div class="widget-content text-center p-0">
+
+                        <img width="42" class="rounded-circle" src="images/placeholder_image.svg" alt="">
+
+
+                        <div class="widget-heading">{{deleteTalent.full_name}} ({{deleteTalent.email}})</div>
+                        <div class="widget-subheading">{{deleteTalent.standard_title}}</div>
+
+                    </div>
+
+                    <p class="text-danger text-center">Are you sure want to remove this Talent?</p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer text-center">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                        ng-click="confirmDeleteTalent(deleteTalent)">Remove</button>
+                    <!-- <input type='submit' ng-click="escalateTalentFunct(escalateModel, 'remove_escalation')"> -->
+                    <!-- <button type="submit" class="btn btn-primary" data-dismiss="modal"
+                        ng-click="escalateTalentFunct(escalateModel, 'remove_escalation')">Escalate</button> -->
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div class="modal flag-popup flag-blue-popup" id="myModal2">
+        <div class="modal-dialog">
+            <div class="modal-content" ng-form name="escalationBox">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Flag Escalation</h4>
+                    <button type="button" class="close" data-dismiss="modal"><img src="images/cross_icon.svg"></button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+
+                    <div class="widget-content p-0">
+                        <div class="widget-content-wrapper">
+                            <div class="widget-content-left mr-3">
+                                <img width="42" class="rounded-circle" src="images/placeholder_image.svg" alt="">
+                            </div>
+                            <div class="widget-content-left">
+                                <div class="widget-heading">{{escalateModel.name}} ({{escalateModel.email}})</div>
+                                <div class="widget-subheading">{{escalateModel.title}}</div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <p class="text-danger">Are you sure to escalate this talent?</p>
+                    <div class="form-group">
+                        <label for="comment">Reason/Comment</label>
+                        <span class="star">*</span>
+                        <textarea class="form-control" rows="3" id="comment"
+                            ng-model="escalateModel.comment"></textarea>
+                        <div ng-show="escalationBox.escalationTextarea.$error.required" style="color:maroon"
+                            role="alert">Please enter comment.</div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary" data-dismiss="modal"
+                        ng-click="escalationBox.$valid && escalateTalentFunct(escalateModel, 'escalate_talent')"
+                        ng-disabled="!escalationBox.$valid">Escalate</button>
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- The Modal -->
+    <div class="modal flag-popup" id="myModal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal"><img src="images/cross_icon.svg"></button>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="widget-content text-center p-0">
+                        <img width="42" class="rounded-circle" src="images/placeholder_image.svg" " alt=" ">
+                                <div class=" widget-heading ">{{escalateModel.name}} ({{escalateModel.email}})</div>
+                        <div class=" widget-subheading ">{{escalateModel.title}}</div>
+                    </div>
+                    <p class=" text-danger text-center ">Are you sure want to remove flag?</p>
+                </div>
+                <!-- Modal footer -->
+                <div class=" modal-footer text-center ">
+                    <button type=" submit" class="btn btn-danger" data-dismiss="modal"
+                            ng-click=" escalateTalentFunct(escalateModel, 'remove_escalation' ) ">Remove</button>
+                        <button type=" submit " class=" btn btn-secondary " data-dismiss=" modal ">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class=" modal fade modal_alert " id=" errorModal " tabindex=" -1 " role=" dialog "
+            aria-labelledby=" exampleModalLongTitle " aria-hidden=" true ">
+            <div class=" alert-modal modal-dialog modal_alert_dialog " role=" document ">
+                <div class=" modal_alert_content ">
+                    <div class=" modal-body modal_alert_body ">
+                        <img class=" img-responsive " src=" images/Error_alert.svg ">
+                        <h2 class=" alert_title alert_title_error ">Error</h2>
+                        <p class=" alert_subtitle ">{{primary_alert_msg}}</p>
+                    </div>
+                    <div class=" modal_alert_footer ">
+                        <button type=" submit " class=" btn btn_error " id=" errorBtn "
+                            data-dismiss=" modal ">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Information Alert -->
+        <div class=" modal fade modal_alert " id=" infoModal " tabindex=" -1 " role=" dialog "
+            aria-labelledby=" exampleModalLongTitle " aria-hidden=" true ">
+            <div class=" alert-modal modal-dialog modal_alert_dialog " role=" document ">
+                <div class=" modal_alert_content ">
+                    <div class=" modal-body modal_alert_body ">
+                        <img class=" img-responsive " src=" images/Information_alert.svg ">
+                        <h2 class=" alert_title alert_title_info ">Confirmation!</h2>
+                        <p class=" alert_subtitle ">{{primary_alert_msg}}</p>
+                    </div>
+                    <div class=" modal_alert_footer ">
+                        <button type=" submit " class=" btn btn_info " data-dismiss=" modal ">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Question Alert -->
+        <div class=" modal fade modal_alert " id=" confirmModal " tabindex=" -1 " role=" dialog "
+            aria-labelledby=" exampleModalLongTitle " aria-hidden=" true ">
+            <div class=" alert-modal modal-dialog modal_alert_dialog " role=" document ">
+                <div class=" modal_alert_content ">
+                    <div class=" modal-body modal_alert_body ">
+                        <img class=" img-responsive " src=" images/Migrate_alert.svg ">
+                        <h2 class=" alert_title alert_title_migrate ">Confirmation</h2>
+                        <p class=" alert_subtitle ">Confirmation Text</p>
+                    </div>
+                    <div class=" modal_alert_footer modal_alert_footer_migrate ">
+                        <button type=" button " class=" btn btn_secondary " id=" questionBtnNo "
+                            data-dismiss=" modal ">No</button>
+                        <button type=" submit " class=" btn btn_migrate " id=" questionBtnYes "
+                            data-dismiss=" modal ">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Success Alert -->
+        <div class=" modal fade modal_alert " id=" successModal " tabindex=" -1 " role=" dialog "
+            aria-labelledby=" exampleModalLongTitle " aria-hidden=" true ">
+            <div class=" alert-modal modal-dialog modal_alert_dialog " role=" document ">
+                <div class=" modal_alert_content ">
+                    <div class=" modal-body modal_alert_body ">
+                        <img class=" img-responsive " src=" images/Success_alert.svg ">
+                        <h2 class=" alert_title alert_title_success ">Success!</h2>
+                        <p class=" alert_subtitle ">{{primary_alert_msg}}</p>
+                    </div>
+                    <div class=" modal_alert_footer ">
+                        <button type=" submit " class=" btn btn_success " id=" successBtn "
+                            data-dismiss=" modal ">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Warning Alert -->
+        <div class=" modal fade modal_alert " id=" warningModal " tabindex=" -1 " role=" dialog "
+            aria-labelledby=" exampleModalLongTitle " aria-hidden=" true ">
+            <div class=" alert-modal modal-dialog modal_alert_dialog " role=" document ">
+                <div class=" modal_alert_content ">
+                    <div class=" modal-body modal_alert_body ">
+                        <img class=" img-responsive " src=" images/Warning_alert.svg ">
+                        <h2 class=" alert_title alert_title_warning ">Warning!</h2>
+                        <p class=" alert_subtitle ">{{primary_alert_msg}}</p>
+                    </div>
+                    <div class=" modal_alert_footer ">
+                        <button type=" submit " class=" btn btn_warning " id=" warningBtn "
+                            data-dismiss=" modal ">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of ssmlApp -->
+    </div>
+    
+    <script>
+        $('.nav-item a').on('click', function () {
+            $('li').removeClass('selected');
+            $(this).closest('li').addClass('selected');
+        });
+    </script>
+    <script src=" https://areaaperta.com/nicescroll/js/jquery.nicescroll.min.js "></script>
+    <script type=" text/javascript ">
+        $(document).ready(function () {
+            $(" .nicescroll ").niceScroll({ autohidemode: true })
+        });
+        
+    </script>
+    <script>
+        function showInfo(id) {
+            let x = id.split("-");
+            if (x !== null && x.length == 2) {
+
+                // $("#triggerHide-" + x[1]).removeClass("d-inline-block");
+                // $("#triggerHide-" + x[1]).addClass("d-none");
+                // $("#triggerShow-" + x[1]).removeClass("d-none");
+                // $("#triggerShow-" + x[1]).addClass("d-inline-block");
+                $("#tooltip-" + x[1]).removeClass("d-none");
+                $("#tooltip-" + x[1]).addClass("d-inline-block");
+                // $("#tooltip-" + x[1]).attr("tabindex", "1").focus();
+            }
+        }
+
+        function hideInfo(id) {
+
+            let x = id.split("-");
+            if (x !== null && x.length == 2) {
+                // $("#triggerHide-" + x[1]).removeClass("d-none");
+                // $("#triggerHide-" + x[1]).addClass("d-inline-block");
+                // $("#triggerShow-" + x[1]).removeClass("d-inline-block");
+                // $("#triggerShow-" + x[1]).addClass("d-none");
+                $("#tooltip-" + x[1]).removeClass("d-inline-block");
+                $("#tooltip-" + x[1]).addClass("d-none");
+                // $("#tooltip-" + x[1]).removeAttr("tabindex");
+
+            }
+        }
+        $(document).mouseup(function (e) {
+
+
+            if ($(e.target).closest(".popdiv").length
+                === 0) {
+                $(".popdiv").removeClass("d-inline-block");
+                $(".popdiv").addClass("d-none");
+            }
+        });
+
+    </script>
+    <script>
+        $(" #smmlBody").click(function () {
+            var x = parent.document.getElementById("userProfileMenu");
+            x.classList.remove("show");
+            var y = parent.document.getElementById("otherMenu");
+            y.classList.remove("show");
+            var z = parent.document.getElementById("notificationDropdown");
+            z.classList.remove("show");
+        });
+        $('.nav-link').click(function (e) {
+            e.preventDefault();
+            $('.nav-link').removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+</body>
+
+</html>
