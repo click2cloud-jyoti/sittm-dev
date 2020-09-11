@@ -69,7 +69,7 @@
             "value": "0"
         },
         "serverFarmResourceGroup": {
-            "value": "test_rg"
+            "value": "mynodeapp"
         },
         "skuCode": {
             "value": "S1"
