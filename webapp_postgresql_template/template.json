@@ -54,10 +54,19 @@
         "hostingPlanName": {
             "type": "string"
         },
+        "hostingEnvironment": {
+            "type": "string"
+        },
         "location": {
             "type": "string"
         },
-        "hostingEnvironment": {
+        "sku": {
+            "type": "string"
+        },
+        "skuCode": {
+            "type": "string"
+        },
+        "workerSize": {
             "type": "string"
         },
         "serverFarmResourceGroup": {
@@ -72,7 +81,8 @@
             "name": "[parameters('name')]",
             "type": "Microsoft.Web/sites",
             "dependsOn": [
-                "microsoft.insights/components/webapp-sittm-test"
+                "[concat('Microsoft.Web/serverfarms/', parameters('hostingPlanName'))]",
+                "microsoft.insights/components/sittm"
             ],
             "properties": {
                 "siteConfig": {
@@ -86,7 +96,7 @@
                     "appSettings": [
                         {
                             "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
-                            "value": "[reference('microsoft.insights/components/webapp-sittm-test', '2015-05-01').InstrumentationKey]"
+                            "value": "[reference('microsoft.insights/components/sittm', '2015-05-01').InstrumentationKey]"
                         },
                         {
                             "name": "XDT_MicrosoftApplicationInsights_Mode",
@@ -106,10 +116,26 @@
             "location": "[parameters('location')]"
         },
         {
+            "apiVersion": "2016-09-01",
+            "name": "[parameters('hostingPlanName')]",
+            "type": "Microsoft.Web/serverfarms",
+            "location": "[parameters('location')]",
+            "properties": {
+                "name": "[parameters('hostingPlanName')]",
+                "workerSizeId": "[parameters('workerSize')]",
+                "numberOfWorkers": "1",
+                "hostingEnvironment": "[parameters('hostingEnvironment')]"
+            },
+            "sku": {
+                "Tier": "[parameters('sku')]",
+                "Name": "[parameters('skuCode')]"
+            }
+        },
+        {
             "apiVersion": "2015-05-01",
-            "name": "webapp-sittm-test",
+            "name": "sittm",
             "type": "microsoft.insights/components",
-            "location": "West US 2",
+            "location": "centralus",
             "properties": {
                 "ApplicationId": "[parameters('name')]",
                 "Request_Source": "IbizaWebAppExtensionCreate"
