@@ -3,19 +3,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "databaseName": {
-            "value": "postgresqldatabase34968"
+            "value": ""
         },
         "administratorLogin": {
-            "value": "postgresqldbuser"
+            "value": ""
         },
         "administratorLoginPassword": {
-            "value": "Newuser@3210"
+            "value": ""
         },
         "mysqLocation": {
             "value": "Central US"
         },
         "serverName": {
-            "value": "sittm-postgresqldbserver"
+            "value": ""
         },
         "skuCapacity": {
             "value": 4
@@ -51,7 +51,7 @@
             "value": "utf8"
         },
         "name": {
-            "value": "sittm"
+            "value": ""
         },
         "hostingPlanName": {
             "value": "ServicePlanea54fda5-8702"
