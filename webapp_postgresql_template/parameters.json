@@ -69,7 +69,7 @@
             "value": "0"
         },
         "serverFarmResourceGroup": {
-            "value": "test-rg"
+            "value": "sittm-azuredevops-rg"
         },
         "skuCode": {
             "value": "S1"
