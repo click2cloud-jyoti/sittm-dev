@@ -9,7 +9,7 @@
             "value": "postgresqldbuser"
         },
         "administratorLoginPassword": {
-            "value": null
+            "value": "Newuser@3210"
         },
         "mysqLocation": {
             "value": "Central US"
