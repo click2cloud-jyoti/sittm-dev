@@ -177,6 +177,10 @@
                     "apiVersion": "2016-10-01",
                     "name": "[parameters('vaults_testingsittmvault_name')]",
                     "location": "eastus",
+                     "dependsOn": [
+                        "[concat('Microsoft.DBforPostgreSQL/servers/', parameters('serverName'), '/databases/' , parameters('databaseName'))]",
+                        "[concat('Microsoft.DBforPostgreSQL/servers/', parameters('serverName'))]"
+                    ],
                     "properties": {
                         "sku": {
                             "family": "A",
