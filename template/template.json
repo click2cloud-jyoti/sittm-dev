@@ -65,41 +65,6 @@
         },
         "subscriptionId": {
             "type": "string"
-        },
-        "keyVaultname": {
-            "type": "string"
-        }, "keyVaultlocation": {
-            "type": "string"
-        },
-        "keyVaulsku": {
-            "type": "string"
-        },
-        "accessPolicies": {
-            "type": "array"
-        },
-        "tenant": {
-            "type": "string"
-        },
-        "enabledForDeployment": {
-            "type": "bool"
-        },
-        "enabledForTemplateDeployment": {
-            "type": "bool"
-        },
-        "enabledForDiskEncryption": {
-            "type": "bool"
-        },
-        "enableRbacAuthorization": {
-            "type": "bool"
-        },
-        "enableSoftDelete": {
-            "type": "bool"
-        },
-        "softDeleteRetentionInDays": {
-            "type": "int"
-        },
-        "networkAcls": {
-            "type": "object"
         }
     },
     "resources": [
@@ -200,33 +165,7 @@
                         "[concat('Microsoft.DBforPostgreSQL/servers/', parameters('serverName'))]"
                     ]
                 }
-            ],
-            "resources": [
-                {
-                    "apiVersion": "2018-02-14",
-                    "name": "[parameters('keyVaultlocation')]",
-                    "location": "[parameters('keyVaultlocation')]",
-                    "type": "Microsoft.KeyVault/vaults",
-                    "properties": {
-                        "enabledForDeployment": "[parameters('enabledForDeployment')]",
-                        "enabledForTemplateDeployment": "[parameters('enabledForTemplateDeployment')]",
-                        "enabledForDiskEncryption": "[parameters('enabledForDiskEncryption')]",
-                        "enableRbacAuthorization": "[parameters('enableRbacAuthorization')]",
-                        "accessPolicies": "[parameters('accessPolicies')]",
-                        "tenantId": "[parameters('tenant')]",
-                        "sku": {
-                            "name": "[parameters('keyVaulsku')]",
-                            "family": "A"
-                        },
-                        "enableSoftDelete": "[parameters('enableSoftDelete')]",
-                        "softDeleteRetentionInDays": "[parameters('softDeleteRetentionInDays')]",
-                        "networkAcls": "[parameters('networkAcls')]"
-                    },
-                    "tags": {},
-                    "dependsOn": []
-                }
-            ],
-            "outputs": {}
+            ]
         }
     ],
     "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
