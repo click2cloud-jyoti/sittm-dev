@@ -345,11 +345,6 @@
 				"dependsOn": [
 					"[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
 				],
-				"properties": {
-					"attributes": {
-						"enabled": true
-					}
-				}
 			},
 			{
 				"type": "Microsoft.KeyVault/vaults/secrets",
@@ -358,12 +353,8 @@
 				"location": "eastus",
 				"dependsOn": [
 					"[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
-				],
-				"properties": {
-					"attributes": {
-						"enabled": true
-					}
-				}
+				]
+				
 			}
     ],
     
