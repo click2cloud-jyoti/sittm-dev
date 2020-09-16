@@ -65,6 +65,9 @@
         "serverFarmResourceGroup": {
             "value": "sittm-azuredevops-rg"
         },
+        "vaults_testingsittmvault_name": {
+            "value": null
+        },
         "subscriptionId": {
             "value": "7289451c-2007-4ac7-b549-6ab7baf9e029"
         }
