@@ -170,208 +170,202 @@
                         "[concat('Microsoft.DBforPostgreSQL/servers/', parameters('serverName'))]"
                     ]
                 }
-            ],
-            "resources": [
-                {
-                    "type": "Microsoft.KeyVault/vaults",
-                    "apiVersion": "2016-10-01",
-                    "name": "[parameters('vaults_testingsittmvault_name')]",
-                    "location": "eastus",
-                     "dependsOn": [
-                        "[concat('Microsoft.DBforPostgreSQL/servers/', parameters('serverName'), '/databases/' , parameters('databaseName'))]",
-                        "[concat('Microsoft.DBforPostgreSQL/servers/', parameters('serverName'))]"
-                    ],
-                    "properties": {
-                        "sku": {
-                            "family": "A",
-                            "name": "Standard"
-                        },
-                        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-                        "accessPolicies": [
-                            {
-                                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-                                "objectId": "c77b039d-c5bb-491d-a10c-ec88dc1662a8",
-                                "permissions": {
-                                    "keys": [
-                                        "Get",
-                                        "List",
-                                        "Update",
-                                        "Create",
-                                        "Import",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore",
-                                        "Decrypt",
-                                        "Encrypt",
-                                        "UnwrapKey",
-                                        "WrapKey",
-                                        "Verify",
-                                        "Sign",
-                                        "Purge"
-                                    ],
-                                    "secrets": [
-                                        "Get",
-                                        "List",
-                                        "Set",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore",
-                                        "Purge"
-                                    ],
-                                    "certificates": [
-                                        "Get",
-                                        "List",
-                                        "Update",
-                                        "Create",
-                                        "Import",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore",
-                                        "ManageContacts",
-                                        "ManageIssuers",
-                                        "GetIssuers",
-                                        "ListIssuers",
-                                        "SetIssuers",
-                                        "DeleteIssuers",
-                                        "Purge"
-                                    ]
-                                }
-                            },
-                            {
-                                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-                                "objectId": "49d9c6ad-dc4c-4f43-b092-77c8fc322b0a",
-                                "permissions": {
-                                    "keys": [
-                                        "Get",
-                                        "List",
-                                        "Update",
-                                        "Create",
-                                        "Import",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore",
-                                        "Decrypt",
-                                        "Encrypt",
-                                        "UnwrapKey",
-                                        "WrapKey",
-                                        "Verify",
-                                        "Sign",
-                                        "Purge"
-                                    ],
-                                    "secrets": [
-                                        "Get",
-                                        "List",
-                                        "Set",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore",
-                                        "Purge"
-                                    ],
-                                    "certificates": [
-                                        "Get",
-                                        "List",
-                                        "Update",
-                                        "Create",
-                                        "Import",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore",
-                                        "ManageContacts",
-                                        "ManageIssuers",
-                                        "GetIssuers",
-                                        "ListIssuers",
-                                        "SetIssuers",
-                                        "DeleteIssuers",
-                                        "Purge"
-                                    ]
-                                }
-                            },
-                            {
-                                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-                                "objectId": "31e8cbe9-bd0b-4b64-9670-63634721b053",
-                                "permissions": {
-                                    "keys": [
-                                        "Get",
-                                        "List",
-                                        "Update",
-                                        "Create",
-                                        "Import",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore"
-                                    ],
-                                    "secrets": [
-                                        "Get",
-                                        "List",
-                                        "Set",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore"
-                                    ],
-                                    "certificates": [
-                                        "Get",
-                                        "List",
-                                        "Update",
-                                        "Create",
-                                        "Import",
-                                        "Delete",
-                                        "Recover",
-                                        "Backup",
-                                        "Restore",
-                                        "ManageContacts",
-                                        "ManageIssuers",
-                                        "GetIssuers",
-                                        "ListIssuers",
-                                        "SetIssuers",
-                                        "DeleteIssuers"
-                                    ]
-                                }
-                            }
-                        ],
-                        "enabledForDeployment": false,
-                        "enabledForDiskEncryption": false,
-                        "enabledForTemplateDeployment": false,
-                        "enableSoftDelete": true
-                    }
-                },
-                {
-                    "type": "Microsoft.KeyVault/vaults/secrets",
-                    "apiVersion": "2016-10-01",
-                    "name": "[concat(parameters('vaults_testingsittmvault_name'), '/databaseinfo')]",
-                    "location": "eastus",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
-                    ],
-                    "properties": {
-                        "attributes": {
-                            "enabled": true
-                        }
-                    }
-                },
-                {
-                    "type": "Microsoft.KeyVault/vaults/secrets",
-                    "apiVersion": "2016-10-01",
-                    "name": "[concat(parameters('vaults_testingsittmvault_name'), '/productiondb')]",
-                    "location": "eastus",
-                    "dependsOn": [
-                        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
-                    ],
-                    "properties": {
-                        "attributes": {
-                            "enabled": true
-                        }
-                    }
-                }
             ]
-        }
+        },
+		{
+				"type": "Microsoft.KeyVault/vaults",
+				"apiVersion": "2016-10-01",
+				"name": "[parameters('vaults_testingsittmvault_name')]",
+				"location": "eastus",
+				"properties": {
+					"sku": {
+						"family": "A",
+						"name": "Standard"
+					},
+					"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+					"accessPolicies": [
+						{
+							"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+							"objectId": "c77b039d-c5bb-491d-a10c-ec88dc1662a8",
+							"permissions": {
+								"keys": [
+									"Get",
+									"List",
+									"Update",
+									"Create",
+									"Import",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore",
+									"Decrypt",
+									"Encrypt",
+									"UnwrapKey",
+									"WrapKey",
+									"Verify",
+									"Sign",
+									"Purge"
+								],
+								"secrets": [
+									"Get",
+									"List",
+									"Set",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore",
+									"Purge"
+								],
+								"certificates": [
+									"Get",
+									"List",
+									"Update",
+									"Create",
+									"Import",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore",
+									"ManageContacts",
+									"ManageIssuers",
+									"GetIssuers",
+									"ListIssuers",
+									"SetIssuers",
+									"DeleteIssuers",
+									"Purge"
+								]
+							}
+						},
+						{
+							"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+							"objectId": "49d9c6ad-dc4c-4f43-b092-77c8fc322b0a",
+							"permissions": {
+								"keys": [
+									"Get",
+									"List",
+									"Update",
+									"Create",
+									"Import",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore",
+									"Decrypt",
+									"Encrypt",
+									"UnwrapKey",
+									"WrapKey",
+									"Verify",
+									"Sign",
+									"Purge"
+								],
+								"secrets": [
+									"Get",
+									"List",
+									"Set",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore",
+									"Purge"
+								],
+								"certificates": [
+									"Get",
+									"List",
+									"Update",
+									"Create",
+									"Import",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore",
+									"ManageContacts",
+									"ManageIssuers",
+									"GetIssuers",
+									"ListIssuers",
+									"SetIssuers",
+									"DeleteIssuers",
+									"Purge"
+								]
+							}
+						},
+						{
+							"tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+							"objectId": "31e8cbe9-bd0b-4b64-9670-63634721b053",
+							"permissions": {
+								"keys": [
+									"Get",
+									"List",
+									"Update",
+									"Create",
+									"Import",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore"
+								],
+								"secrets": [
+									"Get",
+									"List",
+									"Set",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore"
+								],
+								"certificates": [
+									"Get",
+									"List",
+									"Update",
+									"Create",
+									"Import",
+									"Delete",
+									"Recover",
+									"Backup",
+									"Restore",
+									"ManageContacts",
+									"ManageIssuers",
+									"GetIssuers",
+									"ListIssuers",
+									"SetIssuers",
+									"DeleteIssuers"
+								]
+							}
+						}
+					],
+					"enabledForDeployment": false,
+					"enabledForDiskEncryption": false,
+					"enabledForTemplateDeployment": false,
+					"enableSoftDelete": true
+				}
+			},
+			{
+				"type": "Microsoft.KeyVault/vaults/secrets",
+				"apiVersion": "2016-10-01",
+				"name": "[concat(parameters('vaults_testingsittmvault_name'), '/databaseinfo')]",
+				"location": "eastus",
+				"dependsOn": [
+					"[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
+				],
+				"properties": {
+					"attributes": {
+						"enabled": true
+					}
+				}
+			},
+			{
+				"type": "Microsoft.KeyVault/vaults/secrets",
+				"apiVersion": "2016-10-01",
+				"name": "[concat(parameters('vaults_testingsittmvault_name'), '/productiondb')]",
+				"location": "eastus",
+				"dependsOn": [
+					"[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
+				],
+				"properties": {
+					"attributes": {
+						"enabled": true
+					}
+				}
+			}
     ],
     
     "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
