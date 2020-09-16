@@ -2,80 +2,13 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
-        "databaseName": {
-            "value": "postgresqldatabase5461"
-        },
-        "administratorLogin": {
-            "value": "postgresqldbuser"
-        },
-        "administratorLoginPassword": {
-            "value": "Newuser@3210"
-        },
-        "mysqLocation": {
-            "value": "Central US"
-        },
-        "serverName": {
-            "value": "webapp-sittm-postgresqldbserver"
-        },
-        "skuCapacity": {
-            "value": 4
-        },
-        "skuFamily": {
-            "value": "Gen5"
-        },
-        "skuName": {
-            "value": "GP_Gen5_4"
-        },
-        "skuSizeMB": {
-            "value": 102400
-        },
-        "skuTier": {
-            "value": "GeneralPurpose"
-        },
-        "storageMB": {
-            "value": 102400
-        },
-        "backupRetentionDays": {
-            "value": 7
-        },
-        "geoRedundantBackup": {
-            "value": "Disabled"
-        },
-        "version": {
-            "value": "10"
-        },
-        "collation": {
-            "value": "en_US.utf8"
-        },
-        "charset": {
-            "value": "utf8"
-        },
-        "name": {
-            "value": "webapp-sittm"
-        },
-        "hostingPlanName": {
-            "value": "ASP-sittmazuredevopsrg-950c"
-        },
-        "hostingEnvironment": {
-            "value": ""
-        },
-        "location": {
-            "value": "Central US"
-        },
-        "serverFarmResourceGroup": {
-            "value": "sittm-azuredevops-rg"
-        },
-        "subscriptionId": {
-            "value": "7289451c-2007-4ac7-b549-6ab7baf9e029"
-        },
-
-        "keyVaultname": {
+        "keyname": {
             "value": "sittm-keyVault"
         },
-        "keyVaullocation": {
+        "location": {
             "value": "eastus"
         },
-        "keyVaulsku": {
+        "sku": {
             "value": "Standard"
         },
         "accessPolicies": {
