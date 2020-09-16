@@ -3,19 +3,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "databaseName": {
-            "value": ""
+            "value": "postgresqldatabase5461"
         },
         "administratorLogin": {
-            "value": ""
+            "value": "postgresqldbuser"
         },
         "administratorLoginPassword": {
-            "value": ""
+            "value": "Newuser@3210"
         },
         "mysqLocation": {
             "value": "Central US"
         },
         "serverName": {
-            "value": ""
+            "value": "webapp-sittm-postgresqldbserver"
         },
         "skuCapacity": {
             "value": 4
@@ -51,10 +51,10 @@
             "value": "utf8"
         },
         "name": {
-            "value": ""
+            "value": "webapp-sittm"
         },
         "hostingPlanName": {
-            "value": ""
+            "value": "ASP-sittmazuredevopsrg-950c"
         },
         "hostingEnvironment": {
             "value": ""
@@ -62,17 +62,8 @@
         "location": {
             "value": "Central US"
         },
-        "sku": {
-            "value": "Standard"
-        },
-        "workerSize": {
-            "value": "0"
-        },
         "serverFarmResourceGroup": {
             "value": "sittm-azuredevops-rg"
-        },
-        "skuCode": {
-            "value": "S1"
         },
         "subscriptionId": {
             "value": "7289451c-2007-4ac7-b549-6ab7baf9e029"
