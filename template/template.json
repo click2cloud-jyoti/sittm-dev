@@ -340,7 +340,7 @@
 			{
 				"type": "Microsoft.KeyVault/vaults/secrets",
 				"apiVersion": "2016-10-01",
-				"name": "[concat(parameters('vaults_testingsittmvault_name'), '/databaseinfo')]",
+				"name": "[concat(parameters('vaults_testingsittmvault_name'), '/databaseinfocicd')]",
 				"location": "eastus",
 				"dependsOn": [
 					"[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
@@ -354,7 +354,7 @@
 			{
 				"type": "Microsoft.KeyVault/vaults/secrets",
 				"apiVersion": "2016-10-01",
-				"name": "[concat(parameters('vaults_testingsittmvault_name'), '/productiondb')]",
+				"name": "[concat(parameters('vaults_testingsittmvault_name'), '/productiondbcicd')]",
 				"location": "eastus",
 				"dependsOn": [
 					"[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
