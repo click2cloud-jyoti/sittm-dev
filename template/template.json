@@ -67,7 +67,6 @@
             "type": "string"
         },
         "vaults_testingsittmvault_name": {
-            "defaultValue": "testingsittmvault",
             "type": "String"
         }
     },
