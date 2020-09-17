@@ -9,7 +9,7 @@
             "value": "postgresqldbuser"
         },
         "administratorLoginPassword": {
-            "value": "Newuser@3210"
+            "value": null
         },
         "mysqLocation": {
             "value": "Central US"
@@ -23,15 +23,6 @@
         "skuFamily": {
             "value": "Gen5"
         },
-        "skuName": {
-            "value": "GP_Gen5_4"
-        },
-        "skuSizeMB": {
-            "value": 102400
-        },
-        "skuTier": {
-            "value": "GeneralPurpose"
-        },
         "storageMB": {
             "value": 102400
         },
@@ -41,14 +32,23 @@
         "geoRedundantBackup": {
             "value": "Disabled"
         },
+        "skuName": {
+            "value": "GP_Gen5_4"
+        },
+        "skuSizeMB": {
+            "value": 5120
+        },
+        "skuTier": {
+            "value": "GeneralPurpose"
+        },
         "version": {
             "value": "10"
         },
+        "charset": {
+            "value": "  "
+        },
         "collation": {
             "value": "en_US.utf8"
-        },
-        "charset": {
-            "value": "utf8"
         },
         "name": {
             "value": "webapp-sittm"
@@ -56,20 +56,26 @@
         "hostingPlanName": {
             "value": "ASP-sittmazuredevopsrg-950c"
         },
-        "hostingEnvironment": {
-            "value": ""
-        },
         "location": {
             "value": "Central US"
+        },
+        "hostingEnvironment": {
+            "value": "\"\""
         },
         "serverFarmResourceGroup": {
             "value": "sittm-azuredevops-rg"
         },
-        "vaults_testingsittmvault_name": {
-            "value": "keyVaultsittmcicd"
-        },
         "subscriptionId": {
             "value": "7289451c-2007-4ac7-b549-6ab7baf9e029"
+        },
+        "vaults_testingsittmvault_name": {
+            "value": "samplesittmkeyvault"
+        },
+        "secretName": {
+            "value": "vmAdminPassword"
+        },
+        "secretValue": {
+            "value": "admin123"
         }
     }
 }
