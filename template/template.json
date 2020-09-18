@@ -196,7 +196,7 @@
                 "accessPolicies": [
                     {
                         "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
-                        "objectId": "641a9e46-9afd-4e0c-93b5-2d1c9aab9104",
+                        "objectId": "31e8cbe9-bd0b-4b64-9670-63634721b053",
                         "permissions": {
                             "keys": [
                                 "Get",
