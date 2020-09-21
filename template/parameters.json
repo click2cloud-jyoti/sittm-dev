@@ -45,7 +45,7 @@
             "value": "10"
         },
         "charset": {
-            "value": "  "
+            "value": "utf8"
         },
         "collation": {
             "value": "en_US.utf8"
