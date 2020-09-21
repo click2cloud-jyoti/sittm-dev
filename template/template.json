@@ -79,7 +79,7 @@
         "secretValue": {
             "defaultValue": "",
             "type": "String"
-        },
+        }
     },
     "variables": {},
     "resources": [
