@@ -54,7 +54,7 @@
             "value": "webapp-sittm"
         },
         "hostingPlanName": {
-            "value": "ASP-sittmazuredevopsrg-950c"
+            "value": "ASP-appsvclinuxcentralus-bf07"
         },
         "location": {
             "value": "Central US"
