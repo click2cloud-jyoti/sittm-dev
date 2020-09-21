@@ -75,10 +75,6 @@
         "secretName": {
             "defaultValue": "vmAdminPassword",
             "type": "String"
-        },
-        "secretValue": {
-   
-            "type": "String"
         }
     },
     "variables": {},
