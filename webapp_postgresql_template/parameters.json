@@ -3,19 +3,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "databaseName": {
-            "value": "postgresqldatabase5461"
+            "value": ""
         },
         "administratorLogin": {
-            "value": "postgresqldbuser"
+            "value": ""
         },
         "administratorLoginPassword": {
-            "value": "Newuser@3210"
+            "value": ""
         },
         "mysqLocation": {
             "value": "Central US"
         },
         "serverName": {
-            "value": "webapp-sittm-postgresqldbserver"
+            "value": ""
         },
         "skuCapacity": {
             "value": 4
@@ -75,7 +75,7 @@
             "value": "vmAdminPassword"
         },
         "secretValue": {
-             "value": {"user": "postgres@sittm-dev","host": "sittm-dev.postgres.database.azure.com","database": "sittm-dev","password": "Newuser@3210","db_port": "5432","OAUTH_REDIRECT_URI": "https://azurecloudaitechnicaltalentmanagement.azurewebsites.net/auth/callback","OAUTH_SCOPES": "offline_access profile user.read","OAUTH_AUTHORITY": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/","OAUTH_ID_METADATA": "v2.0/.well-known/openid-configuration","OAUTH_AUTHORIZE_ENDPOINT": "oauth2/v2.0/authorize","OAUTH_TOKEN_ENDPOINT": "oauth2/v2.0/token","STG_ACC_NAME": "sittmstoragev1","STG_ACC_KEY": "Mf0oO2BYwRMfZ8pNfrUAJhqjGqjD8zVsKyyLpRPZQlUs6CyaXmHaROfXjYROxxB+o/UAcyI4zbw8N1nO7RGBUQ==","AZURE_CLIENT_ID": "641a9e46-9afd-4e0c-93b5-2d1c9aab9104","AZURE_CLIENT_SECRET": "Wa3-_b.KqGV1mH._HwssE3ROEdx8Q1A_q7","AZURE_TENANT_ID": "72f988bf-86f1-41af-91ab-2d7cd011db47","KEY_VAULT_NAME": "testingsittmvault","KEY_VAULT_SECRET": "productiondb","NODE_PORT": 8080,"SESSION_SECRET": "your_secret_value_here"}
+             "value": ""
         }
     }
 }
