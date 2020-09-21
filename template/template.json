@@ -73,12 +73,13 @@
             "type": "String"
         },
         "secretName": {
-            "defaultValue": "vmAdminPassword",
+            "defaultValue": "sittmDbCredential",
             "type": "String"
         }, 
         "secretValue": {
-            "type": "Object"
-        }
+            "defaultValue": "admin123",
+            "type": "String"
+        },
     },
     "variables": {},
     "resources": [
