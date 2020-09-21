@@ -262,7 +262,6 @@
                 "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_testingsittmvault_name'))]"
             ],
             "properties": {
-                "contentType": "securestring",
                 "value": "[parameters('secretValue')]",
                 "attributes": {
                     "enabled": true
