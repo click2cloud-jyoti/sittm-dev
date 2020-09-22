@@ -112,7 +112,19 @@
                         {
                             "name": "ApplicationInsightsAgent_EXTENSION_VERSION",
                             "value": "~2"
-                        }
+                        },
+                        	{
+							"name":"OAUTH_APP_ID",
+							"value":"24f80239-fde3-4c46-8c16-0f4a673d0602"
+						},
+						{
+							"name":"OAUTH_APP_PASSWORD",
+							"value":"7aXDxR_HmXNM8yNQL-B7TX1_pH_D056-cx"
+						},
+						{
+							"name":"OAUTH_REDIRECT_URI",
+							"value":"https://wepappsittm.azurewebsites.net/auth/callback"
+						}
                     ]
                 },
                 "name": "[parameters('name')]",
